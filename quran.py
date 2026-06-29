@@ -66,7 +66,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
         # Chapter Breadcrumb
         surah_html += f'<nav class="text-sm font-medium text-slate-500 mb-6">\n'
-        surah_html += f'  <a href="/alquran" class="hover:text-emerald-600 transition-colors">Home</a>\n'
+        surah_html += f'  <a href="{{{{ site.url }}}}" class="hover:text-emerald-600 transition-colors">Home</a>\n'
         surah_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
         surah_html += f'  <span class="text-slate-800">Surah {surah_name}</span>\n'
         surah_html += f'</nav>\n\n'
@@ -209,7 +209,7 @@ index_html = "---\nlayout: default\ntitle: \"Al-Quran Chapters\"\npermalink: /al
 
 index_html += '<div class="max-w-5xl mx-auto px-4 py-8">\n'
 index_html += '  <div class="text-center mb-12">\n'
-index_html += '    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">The Holy Al-Quran</h1>\n'
+index_html += '    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">{{{{ site.title }}}}</h1>\n'
 index_html += '    <p class="text-slate-500 max-w-md mx-auto">Select a Surah index chapter below to read translations and verse footnotes.</p>\n'
 index_html += '  </div>\n\n'
 
