@@ -93,11 +93,11 @@ for sura in range(1, TOTAL_SURAS + 1):
         for v in chunk:
             surah_html += f'<a href="/alquran/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
             surah_html += f'  <p class="text-emerald-700 font-bold group-hover:text-emerald-600"><strong>{v["sura"]}:{v["aya"]}</strong></p>\n'
+            surah_html += '</a>\n\n'
             surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-4">{v["arabic_text"]}</p>\n'
             surah_html += f'  <p class="text-slate-700 leading-relaxed mt-2">{v["translation"]}</p>\n'
             if v["footnotes"]:
                 surah_html += f'  <small style="color:gray;">{v["footnotes"]}</small>\n'
-            surah_html += '</a>\n\n'
             
         if total_pages > 1:
             surah_html += '<div class="flex justify-between items-center my-12 pt-6 border-t border-slate-200">\n'
