@@ -200,6 +200,7 @@ for sura in range(1, TOTAL_SURAS + 1):
             
     time.sleep(1)
 
+
 # --- 3. GENERATE ROOT CHAPTERS INDEX PAGE ---
 print("Generating root chapters indexing page...")
 os.makedirs("verses", exist_ok=True)
@@ -262,4 +263,4 @@ index_html += '</script>\n'
 with open("verses/index.html", "w", encoding="utf-8") as f:
     f.write(index_html)
 
-print("Static structure generated inside /verses/ with clean public URLs!")
+print("Updated!")
