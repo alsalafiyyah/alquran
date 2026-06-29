@@ -15,14 +15,17 @@ title: "The Holy Quran - English Translation"
 
 <!-- Grid Layout for Surahs -->
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-  {% for i in (1..114) %}
-    <a href="/alquran/{{ i }}/" class="group flex flex-col justify-center items-center p-5 bg-white border border-slate-200 rounded-xl shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md">
-      <span class="text-xs font-semibold text-slate-400 group-hover:text-emerald-600 transition-colors">
-        SURAH
-      </span>
-      <span class="text-2xl font-bold text-slate-800 mt-1">
-        {{ i }}
-      </span>
-    </a>
-  {% endfor %}
+{% assign surah_names = "Al-Fatihah,Al-Baqarah,Aal 'Imran,An-Nisa',Al-Ma'idah,Al-An'am,Al-A'raf,Al-Anfal,At-Tawbah,Yunus,Hud,Yusuf,Ar-Ra'd,Ibrahim,Al-Hijr,An-Nahl,Al-Isra',Al-Kahf,Maryam,Ta-Ha,Al-Anbiya',Al-Hajj,Al-Mu'minun,An-Nur,Al-Furqan,Ash-Shu'ara',An-Naml,Al-Qasas,Al-Ankabut,Ar-Rum,Luqman,As-Sajdah,Al-Ahzab,Saba',Fatir,Ya-Sin,As-Saffat,Sad,Az-Zumar,Ghafir,Fussilat,Ash-Shura,Az-Zukhruf,Ad-Dukhan,Al-Jathiyah,Al-Ahqaf,Muhammad,Al-Fath,Al-Hujurat,Qaf,Adh-Dhariyat,At-Tur,An-Najm,Al-Qamar,Ar-Rahman,Al-Waqi'ah,Al-Hadid,Al-Mujadilah,Al-Hashr,Al-Mumtahanah,As-Saff,Al-Jumu'ah,Al-Munafiqun,At-Taghabun,At-Talaq,At-Tahrim,Al-Mulk,Al-Qalam,Al-Haqqah,Al-Ma'arij,Nuh,Al-Jinn,Al-Muzzammil,Al-Muddaththir,Al-Qiyamah,Al-Insan,Al-Mursalat,An-Naba',An-Nazi'at,'Abasa,At-Takwir,Al-Infitar,Al-Mutaffifin,Al-Inshiqaq,Al-Buruj,At-Tariq,Al-A'la,Al-Ghashiyah,Al-Fajr,Al-Balad,Ash-Shams,Al-Layl,Ad-Duha,Ash-Sharh,At-Tin,Al-'Alaq,Al-Qadr,Al-Bayyinah,Az-Zalzalah,Al-'Adiyat,Al-Qari'ah,At-Takathur,Al-'Asr,Al-Humazah,Al-Fil,Quraysh,Al-Ma'un,Al-Kauthar,Al-Kafirun,An-Nasr,Al-Masad,Al-Ikhlas,Al-Falaq,An-Nas" | split: "," %}
+
+{% for i in (1..114) %}
+  {% assign name_index = i | minus: 1 %}
+  <a href="/alquran/{{ i }}/" class="group flex flex-col justify-center items-center p-5 bg-white border border-slate-200 rounded-xl shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md">
+    <span class="text-xs font-semibold text-slate-400 group-hover:text-emerald-600 transition-colors">
+      {{ i }}
+    </span>
+    <span class="text-xl font-bold text-slate-800 mt-1 text-center">
+      {{ surah_names[name_index] }}
+    </span>
+  </a>
+{% endfor %}
 </div>

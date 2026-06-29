@@ -8,12 +8,29 @@ TRANSLATION = "english_hilali_khan"
 TOTAL_SURAS = 114  
 VERSES_PER_PAGE = 30  
 
+# 114 Surah Names ordered mapping
+SURAH_NAMES = [
+    "Al-Fatihah", "Al-Baqarah", "Al 'Imran", "An-Nisa'", "Al-Ma'idah", "Al-An'am", "Al-A'raf", "Al-Anfal", "At-Tawbah", "Yunus",
+    "Hud", "Yusuf", "Ar-Ra'd", "Ibrahim", "Al-Hijr", "An-Nahl", "Al-Isra'", "Al-Kahf", "Maryam", "Ta-Ha",
+    "Al-Anbiya'", "Al-Hajj", "Al-Mu'minun", "An-Nur", "Al-Furqan", "Ash-Shu'ara'", "An-Naml", "Al-Qasas", "Al-Ankabut", "Ar-Rum",
+    "Luqman", "As-Sajdah", "Al-Ahzab", "Saba'", "Fatir", "Ya-Sin", "As-Saffat", "Sad", "Az-Zumar", "Ghafir",
+    "Fussilat", "Ash-Shura", "Az-Zukhruf", "Ad-Dukhan", "Al-Jathiyah", "Al-Ahqaf", "Muhammad", "Al-Fath", "Al-Hujurat", "Qaf",
+    "Adh-Dhariyat", "At-Tur", "An-Najm", "Al-Qamar", "Ar-Rahman", "Al-Waqi'ah", "Al-Hadid", "Al-Mujadilah", "Al-Hashr", "Al-Mumtahanah",
+    "As-Saff", "Al-Jumu'ah", "Al-Munafiqun", "At-Taghabun", "At-Talaq", "At-Tahrim", "Al-Mulk", "Al-Qalam", "Al-Haqqah", "Al-Ma'arij",
+    "Nuh", "Al-Jinn", "Al-Muzzammil", "Al-Muddaththir", "Al-Qiyamah", "Al-Insan", "Al-Mursalat", "An-Naba'", "An-Nazi'at", "'Abasa",
+    "At-Takwir", "Al-Infitar", "Al-Mutaffifin", "Al-Inshiqaq", "Al-Buruj", "At-Tariq", "Al-A'la", "Al-Ghashiyah", "Al-Fajr", "Al-Balad",
+    "Ash-Shams", "Al-Layl", "Ad-Duha", "Ash-Sharh", "At-Tin", "Al-'Alaq", "Al-Qadr", "Al-Bayyinah", "Az-Zalzalah", "Al-'Adiyat",
+    "Al-Qari'ah", "At-Takathur", "Al-'Asr", "Al-Humazah", "Al-Fil", "Quraysh", "Al-Ma'un", "Al-Kauthar", "Al-Kafirun", "An-Nasr",
+    "Al-Masad", "Al-Ikhlas", "Al-Falaq", "An-Nas"
+]
+
 def chunk_list(lst, n):
     for i in range(0, len(lst), n):
         yield lst[i:i + n]
 
 for sura in range(1, TOTAL_SURAS + 1):
-    print(f"Fetching Surah {sura}...")
+    surah_name = SURAH_NAMES[sura - 1]
+    print(f"Fetching Surah {sura}: {surah_name}...")
     
     url = f"https://quranenc.com/api/v1/translation/sura/{TRANSLATION}/{sura}"
     response = requests.get(url)
@@ -25,38 +42,35 @@ for sura in range(1, TOTAL_SURAS + 1):
     data = response.json()
     verses = data.get('result', [])
     
-    # Files are created inside "verses", but URLs stay clean!
     base_dir = f"verses/{sura}"
     os.makedirs(base_dir, exist_ok=True)
     
     # --- 1. PAGINATED SURAH PAGES ---
-    # Break verses down into clean chunks
     verse_chunks = list(chunk_list(verses, VERSES_PER_PAGE))
     total_pages = len(verse_chunks)
     
     for page_idx, chunk in enumerate(verse_chunks):
         page_num = page_idx + 1
         
-        # Keep public display URLs clean without /verses/
         prev_page_url = None if page_num == 1 else (f"/alquran/{sura}/" if page_num == 2 else f"/{sura}/page{page_num - 1}")
         next_page_url = None if page_num == total_pages else f"/alquran/{sura}/page{page_num + 1}"
         
         # Build Front Matter
         surah_html = "---\nlayout: default\n"
-        surah_html += f"title: \"Surah {sura} - Page {page_num}\"\n"
+        surah_html += f"title: \"Surah {surah_name} - Page {page_num}\"\n"
         if page_num == 1:
-            surah_html += f"permalink: /{sura}/\n"  # Clean URL
+            surah_html += f"permalink: /{sura}/\n"
         else:
-            surah_html += f"permalink: /{sura}/page{page_num}\n"  # Clean URL
+            surah_html += f"permalink: /{sura}/page{page_num}\n"
         surah_html += "---\n\n"
         
-        surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {sura}</h1>\n'
+        # Heading updated to show Surah Name
+        surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {surah_name}</h1>\n'
         if total_pages > 1:
             surah_html += f'  <p class="text-sm text-slate-500 mt-1">Page {page_num} of {total_pages}</p>\n'
         surah_html += '</div>\n\n'
         
         for v in chunk:
-            # Targets the clean public URL path
             surah_html += f'<a href="/alquran/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
             surah_html += f'  <p class="text-emerald-700 font-bold group-hover:text-emerald-600"><strong>{v["sura"]}:{v["aya"]}</strong></p>\n'
             surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-4">{v["arabic_text"]}</p>\n'
@@ -87,9 +101,8 @@ for sura in range(1, TOTAL_SURAS + 1):
     # --- 2. INDIVIDUAL VERSE PAGES ---
     for v in verses:
         aya = v["aya"]
-        # Public permalink strips out the 'verses/' folder layout!
-        verse_html = f"---\nlayout: default\ntitle: \"Surah {sura}, Verse {aya}\"\npermalink: /{sura}/{aya}\n---\n\n"
-        verse_html += f'<div class="single-verse">\n  <p class="text-emerald-700 font-bold mb-4"><strong>{sura}:{aya}</strong></p>\n'
+        verse_html = f"---\nlayout: default\ntitle: \"Surah {surah_name}, Verse {aya}\"\npermalink: /{sura}/{aya}\n---\n\n"
+        verse_html += f'<div class="single-verse">\n  <p class="text-emerald-700 font-bold mb-4"><strong>{surah_name} ({sura}:{aya})</strong></p>\n'
         verse_html += f'  <p dir="rtl" style="text-align:right; font-size:32px;" class="font-arabic text-slate-900 leading-widest mb-6">{v["arabic_text"]}</p>\n'
         verse_html += f'  <p style="font-size:18px;" class="text-slate-800 leading-relaxed">{v["translation"]}</p>\n'
         if v["footnotes"]:
