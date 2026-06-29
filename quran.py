@@ -38,7 +38,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         page_num = page_idx + 1
         
         # Keep public display URLs clean without /verses/
-        prev_page_url = None if page_num == 1 else (f"/{sura}/" if page_num == 2 else f"/{sura}/page{page_num - 1}")
+        prev_page_url = None if page_num == 1 else (f"/alquran/{sura}/" if page_num == 2 else f"/alquran/{sura}/page{page_num - 1}")
         next_page_url = None if page_num == total_pages else f"/{sura}/page{page_num + 1}"
         
         # Build Front Matter
@@ -47,7 +47,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         if page_num == 1:
             surah_html += f"permalink: /{sura}/\n"  # Clean URL
         else:
-            surah_html += f"permalink: /{sura}/page{page_num}\n"  # Clean URL
+            surah_html += f"permalink: /alquran/{sura}/page{page_num}\n"  # Clean URL
         surah_html += "---\n\n"
         
         surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {sura}</h1>\n'
@@ -57,7 +57,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
         for v in chunk:
             # Targets the clean public URL path
-            surah_html += f'<a href="/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
+            surah_html += f'<a href="/alquran/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
             surah_html += f'  <p class="text-emerald-700 font-bold group-hover:text-emerald-600"><strong>{v["sura"]}:{v["aya"]}</strong></p>\n'
             surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-4">{v["arabic_text"]}</p>\n'
             surah_html += f'  <p class="text-slate-700 leading-relaxed mt-2">{v["translation"]}</p>\n'
