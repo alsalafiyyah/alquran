@@ -25,7 +25,7 @@ for sura in range(1, TOTAL_SURAS + 1):
     data = response.json()
     verses = data.get('result', [])
     
-    # We write into a flattened 'verses' folder layout structure
+    # Isolate all generation steps into a clean 'verses' container
     base_dir = f"verses/{sura}"
     os.makedirs(base_dir, exist_ok=True)
     
@@ -36,20 +36,20 @@ for sura in range(1, TOTAL_SURAS + 1):
     for page_idx, chunk in enumerate(verse_chunks):
         page_num = page_idx + 1
         
-        # Explicitly declare clean paths
+        # Explicit file-based pagination links 
         if page_num == 1:
             prev_page_url = None
-            next_page_url = f"/alquran/{sura}/page2" if total_pages > 1 else None
-            current_permalink = f"/{sura}" # Removes trailing slash to force clean mapping
+            next_page_url = f"/alquran/{sura}/page2.html" if total_pages > 1 else None
+            current_permalink = f"/alquran/{sura}.html" # Maps exactly to a flat file layout
         else:
-            prev_page_url = f"/alquran/{sura}" if page_num == 2 else f"/alquran/{sura}/page{page_num - 1}"
-            next_page_url = None if page_num == total_pages else f"/alquran/{sura}/page{page_num + 1}"
-            current_permalink = f"/{sura}/page{page_num}"
+            prev_page_url = f"/alquran/{sura}.html" if page_num == 2 else f"/alquran/{sura}/page{page_num - 1}.html"
+            next_page_url = None if page_num == total_pages else f"/alquran/{sura}/page{page_num + 1}.html"
+            current_permalink = f"/alquran/{sura}/page{page_num}.html"
         
         # Build Front Matter
         surah_html = "---\nlayout: default\n"
         surah_html += f"title: \"Surah {sura} - Page {page_num}\"\n"
-        surah_html += f"permalink: {current_permalink}\n" 
+        surah_html += f"permalink: {current_permalink}\n"
         surah_html += "---\n\n"
         
         surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {sura}</h1>\n'
@@ -63,7 +63,7 @@ for sura in range(1, TOTAL_SURAS + 1):
             surah_html += f'<div class="relative bg-white border border-slate-200/70 p-6 sm:p-8 rounded-2xl shadow-xs hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group flex flex-col">\n'
             surah_html += f'  <div class="flex justify-between items-center mb-6">\n'
             surah_html += f'    <span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50 px-2.5 py-1 border border-slate-200/60 rounded-md">Verse {v["sura"]}:{v["aya"]}</span>\n'
-            surah_html += f'    <a href="/alquran/{sura}/{v["aya"]}" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1">Focus Verse &rarr;</a>\n'
+            surah_html += f'    <a href="/alquran/{sura}/{v["aya"]}.html" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1">Focus Verse &rarr;</a>\n'
             surah_html += f'  </div>\n'
             surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl sm:text-4xl text-slate-950 leading-[2] tracking-wide my-4 select-all">{v["arabic_text"]}</p>\n'
             surah_html += f'  <p class="text-slate-700 text-base sm:text-[17px] leading-relaxed mt-4 font-normal">{v["translation"]}</p>\n'
@@ -90,7 +90,7 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += '  <span class="text-slate-300 text-sm font-medium px-4 py-2">Next Page &rarr;</span>\n'
             surah_html += '</div>\n'
             
-        # Write files explicitly mapped to match exactly how Jekyll builds paths
+        # Target internal structural naming scheme cleanly
         filename = f"{base_dir}/index.html" if page_num == 1 else f"{base_dir}/page{page_num}.html"
         with open(filename, "w", encoding="utf-8") as f:
             f.write(surah_html)
@@ -98,7 +98,7 @@ for sura in range(1, TOTAL_SURAS + 1):
     # --- 2. INDIVIDUAL VERSE PAGES ---
     for v in verses:
         aya = v["aya"]
-        verse_html = f"---\nlayout: default\ntitle: \"Surah {sura}, Verse {aya}\"\npermalink: /alquran/{sura}/{aya}\n---\n\n"
+        verse_html = f"---\nlayout: default\ntitle: \"Surah {sura}, Verse {aya}\"\npermalink: /alquran/{sura}/{aya}.html\n---\n\n"
         verse_html += f'<div class="single-verse">\n  <p class="text-emerald-700 font-bold mb-4"><strong>{sura}:{aya}</strong></p>\n'
         verse_html += f'  <p dir="rtl" style="text-align:right; font-size:32px;" class="font-arabic text-slate-900 leading-widest mb-6">{v["arabic_text"]}</p>\n'
         verse_html += f'  <p style="font-size:18px;" class="text-slate-800 leading-relaxed">{v["translation"]}</p>\n'
@@ -111,4 +111,4 @@ for sura in range(1, TOTAL_SURAS + 1):
             
     time.sleep(1)
 
-print("Build script successfully rebuilt with unified routing configurations!")
+print("Build script updated with explicit extension routing parameters!")
