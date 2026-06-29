@@ -3,27 +3,29 @@ layout: default
 title: "The Noble Qur'an"
 ---
 
-<!-- Hero Section -->
 <div class="text-center max-w-2xl mx-auto my-12">
   <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-    {{ site.title}}
+    {{ site.title }}
   </h1>
   <p class="mt-4 text-lg text-slate-600 leading-relaxed">
     Read the Qur'an online with translations and audio recitation.
   </p>
+  
+  <div class="mt-8 max-w-md mx-auto relative px-4">
+    <input type="text" id="surahSearch" onkeyup="filterSurahs()" placeholder="Search Surah by name or number..." 
+           class="w-full px-4 py-3 rounded-xl border border-slate-200 shadow-xs focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-sm transition-all bg-white text-slate-800">
+  </div>
 </div>
 
-<!-- Grid Layout for Surahs -->
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<div id="surahGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
 {% assign surah_names = "Al-Fatihah,Al-Baqarah,Aal 'Imran,An-Nisa',Al-Ma'idah,Al-An'am,Al-A'raf,Al-Anfal,At-Tawbah,Yunus,Hud,Yusuf,Ar-Ra'd,Ibrahim,Al-Hijr,An-Nahl,Al-Isra',Al-Kahf,Maryam,Ta-Ha,Al-Anbiya',Al-Hajj,Al-Mu'minun,An-Nur,Al-Furqan,Ash-Shu'ara',An-Naml,Al-Qasas,Al-Ankabut,Ar-Rum,Luqman,As-Sajdah,Al-Ahzab,Saba',Fatir,Ya-Sin,As-Saffat,Sad,Az-Zumar,Ghafir,Fussilat,Ash-Shura,Az-Zukhruf,Ad-Dukhan,Al-Jathiyah,Al-Ahqaf,Muhammad,Al-Fath,Al-Hujurat,Qaf,Adh-Dhariyat,At-Tur,An-Najm,Al-Qamar,Ar-Rahman,Al-Waqi'ah,Al-Hadid,Al-Mujadilah,Al-Hashr,Al-Mumtahanah,As-Saff,Al-Jumu'ah,Al-Munafiqun,At-Taghabun,At-Talaq,At-Tahrim,Al-Mulk,Al-Qalam,Al-Haqqah,Al-Ma'arij,Nuh,Al-Jinn,Al-Muzzammil,Al-Muddaththir,Al-Qiyamah,Al-Insan,Al-Mursalat,An-Naba',An-Nazi'at,'Abasa,At-Takwir,Al-Infitar,Al-Mutaffifin,Al-Inshiqaq,Al-Buruj,At-Tariq,Al-A'la,Al-Ghashiyah,Al-Fajr,Al-Balad,Ash-Shams,Al-Layl,Ad-Duha,Ash-Sharh,At-Tin,Al-'Alaq,Al-Qadr,Al-Bayyinah,Az-Zalzalah,Al-'Adiyat,Al-Qari'ah,At-Takathur,Al-'Asr,Al-Humazah,Al-Fil,Quraysh,Al-Ma'un,Al-Kauthar,Al-Kafirun,An-Nasr,Al-Masad,Al-Ikhlas,Al-Falaq,An-Nas" | split: "," %}
 
 {% for i in (1..114) %}
   {% assign name_index = i | minus: 1 %}
-  <a href="/alquran/{{ i }}/" class="group flex flex-col justify-center items-center p-5 bg-white border border-slate-200 rounded-xl shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md">
+  <a href="/alquran/{{ i }}/" data-name="{{ surah_names[name_index] | downcase }}" data-id="{{ i }}" class="surah-card group flex flex-col justify-center items-center p-5 bg-white border border-slate-200 rounded-xl shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md">
     <span class="text-xs font-semibold text-slate-400 group-hover:text-emerald-600 transition-colors mb-2">
       {{ i }}
     </span>
-    <!-- Dynamic SVG Image call -->
     <img src="https://alsalafiyyah.github.io/alquran/assets/svg/{{ i }}.svg" alt="{{ surah_names[name_index] }}" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-200" />
     <span class="text-sm font-medium text-slate-500 mt-2 text-center">
       {{ surah_names[name_index] }}
@@ -31,3 +33,22 @@ title: "The Noble Qur'an"
   </a>
 {% endfor %}
 </div>
+
+<script>
+function filterSurahs() {
+    let input = document.getElementById('surahSearch').value.toLowerCase().trim();
+    let cards = document.getElementsByClassName('surah-card');
+    
+    for (let i = 0; i < cards.length; i++) {
+        let name = cards[i].getAttribute('data-name');
+        let id = cards[i].getAttribute('data-id');
+        
+        // Displays card item if it matches the text string target or raw index integer string target value
+        if (name.includes(input) || id === input) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
