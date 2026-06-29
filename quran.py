@@ -40,7 +40,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
     data = response.json()
     verses = data.get('result', [])
-    total_verses = len(verses) # Dynamically calculated verse count
+    total_verses = len(verses)
     
     base_dir = f"verses/{sura}"
     os.makedirs(base_dir, exist_ok=True)
@@ -55,7 +55,6 @@ for sura in range(1, TOTAL_SURAS + 1):
         prev_page_url = None if page_num == 1 else (f"/alquran/{sura}/" if page_num == 2 else f"/{sura}/page{page_num - 1}")
         next_page_url = None if page_num == total_pages else f"/alquran/{sura}/page{page_num + 1}"
         
-        # Build Front Matter
         surah_html = "---\nlayout: default\n"
         surah_html += f"title: \"Surah {surah_name} - Page {page_num}\"\n"
         if page_num == 1:
@@ -64,15 +63,33 @@ for sura in range(1, TOTAL_SURAS + 1):
             surah_html += f"permalink: /{sura}/page{page_num}\n"
         surah_html += "---\n\n"
         
-        # Heading updated to show SVG layout, Name, and Verse count
+        # Chapter Breadcrumb
+        surah_html += f'<nav class="text-sm font-medium text-slate-500 mb-6">\n'
+        surah_html += f'  <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>\n'
+        surah_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
+        surah_html += f'  <span class="text-slate-800">Surah {surah_name}</span>\n'
+        surah_html += f'</nav>\n\n'
+        
+        # Header
         surah_html += f'<div class="mb-8 flex flex-col items-center justify-center text-center">\n'
-        surah_html += f'  <img src="https://alsalafiyyah.github.io/alquran/assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
+        surah_html += f'  <img src="./assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
         surah_html += f'  <h1 class="text-3xl font-bold text-slate-800">{surah_name}</h1>\n'
         surah_html += f'  <p class="text-sm text-emerald-600 font-medium mt-1">({total_verses} Verses)</p>\n'
         if total_pages > 1:
             surah_html += f'  <p class="text-xs text-slate-400 mt-1">Page {page_num} of {total_pages}</p>\n'
         surah_html += '</div>\n\n'
         
+        # Verse Dropdown Navigation (Tailwind Select Form)
+        surah_html += f'<div class="mb-8 max-w-xs mx-auto">\n'
+        surah_html += f'  <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>\n'
+        surah_html += f'  <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">\n'
+        surah_html += f'    <option value="">Select verse...</option>\n'
+        for total_v in verses:
+            surah_html += f'    <option value="/alquran/{sura}/{total_v["aya"]}">Verse {total_v["aya"]}</option>\n'
+        surah_html += f'  </select>\n'
+        surah_html += f'</div>\n\n'
+        
+        # Verses Listing
         for v in chunk:
             surah_html += f'<a href="/alquran/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
             surah_html += f'  <p class="text-emerald-700 font-bold group-hover:text-emerald-600"><strong>{v["sura"]}:{v["aya"]}</strong></p>\n'
@@ -105,8 +122,27 @@ for sura in range(1, TOTAL_SURAS + 1):
     for v in verses:
         aya = v["aya"]
         verse_html = f"---\nlayout: default\ntitle: \"Surah {surah_name}, Verse {aya}\"\npermalink: /{sura}/{aya}\n---\n\n"
-        verse_html += f'<div class="single-verse">\n  <p class="text-emerald-700 font-bold mb-4"><strong>{surah_name} ({sura}:{aya})</strong></p>\n'
-        verse_html += f'  <p dir="rtl" style="text-align:right; font-size:32px;" class="font-arabic text-slate-900 leading-widest mb-6">{v["arabic_text"]}</p>\n'
+        
+        # Single Verse Breadcrumb
+        verse_html += f'<nav class="text-sm font-medium text-slate-500 mb-6">\n'
+        verse_html += f'  <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>\n'
+        verse_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
+        verse_html += f'  <a href="/alquran/{sura}/" class="hover:text-emerald-600 transition-colors">Surah {surah_name}</a>\n'
+        verse_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
+        verse_html += f'  <span class="text-slate-800">Verse {aya}</span>\n'
+        verse_html += f'</nav>\n\n'
+        
+        # Single Verse SVG Layout Header
+        verse_html += f'<div class="mb-10 flex flex-col items-center justify-center text-center">\n'
+        verse_html += f'  <img src="./assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
+        verse_html += f'  <h1 class="text-3xl font-bold text-slate-800">{surah_name}</h1>\n'
+        verse_html += f'  <p class="text-sm text-emerald-600 font-medium mt-1">(Verse {aya})</p>\n'
+        verse_html += '</div>\n\n'
+        
+        # Single Verse Content Body
+        verse_html += f'<div class="single-verse bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs">\n'
+        verse_html += f'  <p class="text-emerald-700 font-bold mb-4"><strong>{surah_name} ({sura}:{aya})</strong></p>\n'
+        verse_html += f'  <p dir="rtl" style="font-size:32px;" class="font-arabic text-right text-slate-900 leading-widest mb-6">{v["arabic_text"]}</p>\n'
         verse_html += f'  <p style="font-size:18px;" class="text-slate-800 leading-relaxed">{v["translation"]}</p>\n'
         if v["footnotes"]:
             verse_html += f'  <div class="mt-6 bg-slate-50 border-l-4 border-slate-300 p-4 text-xs text-slate-500 rounded-r-md leading-relaxed"><small>{v["footnotes"]}</small></div>\n'
