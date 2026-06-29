@@ -72,7 +72,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
         # Header
         surah_html += f'<div class="mb-8 flex flex-col items-center justify-center text-center">\n'
-        surah_html += f'  <img src="./assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
+        surah_html += f'  <img src="{{{{ site.url }}}}/assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
         surah_html += f'  <h1 class="text-3xl font-bold text-slate-800">{surah_name}</h1>\n'
         surah_html += f'  <p class="text-sm text-emerald-600 font-medium mt-1">({total_verses} Verses)</p>\n'
         if total_pages > 1:
@@ -134,7 +134,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
         # Single Verse SVG Layout Header
         verse_html += f'<div class="mb-10 flex flex-col items-center justify-center text-center">\n'
-        verse_html += f'  <img src="./assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
+        verse_html += f'  <img src="{{{{ site.url }}}}/assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
         verse_html += f'  <h1 class="text-3xl font-bold text-slate-800">{surah_name}</h1>\n'
         verse_html += f'  <p class="text-sm text-emerald-600 font-medium mt-1">(Verse {aya})</p>\n'
         verse_html += '</div>\n\n'
