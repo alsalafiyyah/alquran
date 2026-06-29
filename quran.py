@@ -45,7 +45,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         surah_html = "---\nlayout: default\n"
         surah_html += f"title: \"Surah {sura} - Page {page_num}\"\n"
         if page_num == 1:
-            surah_html += f"permalink: /{sura}/\n"  # Clean URL
+            surah_html += f"permalink: /alquran/{sura}/\n"  # Clean URL
         else:
             surah_html += f"permalink: /alquran/{sura}/page{page_num}\n"  # Clean URL
         surah_html += "---\n\n"
@@ -56,14 +56,33 @@ for sura in range(1, TOTAL_SURAS + 1):
         surah_html += '</div>\n\n'
         
         for v in chunk:
-            # Targets the clean public URL path
-            surah_html += f'<a href="/alquran/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
-            surah_html += f'  <p class="text-emerald-700 font-bold group-hover:text-emerald-600"><strong>{v["sura"]}:{v["aya"]}</strong></p>\n'
-            surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-4">{v["arabic_text"]}</p>\n'
-            surah_html += f'  <p class="text-slate-700 leading-relaxed mt-2">{v["translation"]}</p>\n'
-            if v["footnotes"]:
-                surah_html += f'  <small style="color:gray;">{v["footnotes"]}</small>\n'
-            surah_html += '</a>\n\n'
+# Escape footnote text quotes cleanly so javascript functions won't crash
+            clean_footnote = v["footnotes"].replace('"', '\\"').replace('\n', '\\n') if v["footnotes"] else ""
+            
+            surah_html += f'<div class="relative bg-white border border-slate-200/70 p-6 sm:p-8 rounded-2xl shadow-xs hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group flex flex-col">\n'
+            
+            # Header line: Verse Meta Indicator + Anchor Link to Single Page
+            surah_html += f'  <div class="flex justify-between items-center mb-6">\n'
+            surah_html += f'    <span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50 px-2.5 py-1 border border-slate-200/60 rounded-md">Verse {v["sura"]}:{v["aya"]}</span>\n'
+            surah_html += f'    <a href="/alquran/{sura}/{v["aya"]}" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1">Focus Verse &rarr;</a>\n'
+            surah_html += f'  </div>\n'
+            
+            # Arabic Text Block
+            surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl sm:text-4xl text-slate-950 leading-[2] tracking-wide my-4 select-all">{v["arabic_text"]}</p>\n'
+            
+            # English Translation Block
+            surah_html += f'  <p class="text-slate-700 text-base sm:text-[17px] leading-relaxed mt-4 font-normal">{v["translation"]}</p>\n'
+            
+            # Interactive Footnote Action trigger button
+            if clean_footnote:
+                surah_html += f'  <div class="mt-6 pt-4 border-t border-slate-100 flex items-center">\n'
+                surah_html += f'    <button onclick="openFootnote(\'Surah {v["sura"]}:{v["aya"]} Commentary\', `{clean_footnote}`)" class="cursor-pointer inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100/80 px-3.5 py-2 rounded-xl border border-emerald-200/40 transition-colors">\n'
+                surah_html += f'      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>\n'
+                surah_html += f'      View Footnotes\n'
+                surah_html += f'    </button>\n'
+                surah_html += f'  </div>\n'
+                
+            surah_html += '</div>\n\n'
             
         if total_pages > 1:
             surah_html += '<div class="flex justify-between items-center my-12 pt-6 border-t border-slate-200">\n'
