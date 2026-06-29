@@ -1,6 +1,5 @@
 ---
 layout: default
-title: "The Holy Quran - English Translation"
 ---
 
 <!-- Hero Section -->
@@ -20,10 +19,12 @@ title: "The Holy Quran - English Translation"
 {% for i in (1..114) %}
   {% assign name_index = i | minus: 1 %}
   <a href="/alquran/{{ i }}/" class="group flex flex-col justify-center items-center p-5 bg-white border border-slate-200 rounded-xl shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-md">
-    <span class="text-xs font-semibold text-slate-400 group-hover:text-emerald-600 transition-colors">
+    <span class="text-xs font-semibold text-slate-400 group-hover:text-emerald-600 transition-colors mb-2">
       {{ i }}
     </span>
-    <span class="text-xl font-bold text-slate-800 mt-1 text-center">
+    <!-- Dynamic SVG Image call -->
+    <img src="/assets/svg/{{ i }}.svg" alt="{{ surah_names[name_index] }}" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-200" />
+    <span class="text-sm font-medium text-slate-500 mt-2 text-center">
       {{ surah_names[name_index] }}
     </span>
   </a>

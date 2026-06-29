@@ -8,7 +8,6 @@ TRANSLATION = "english_hilali_khan"
 TOTAL_SURAS = 114  
 VERSES_PER_PAGE = 30  
 
-# 114 Surah Names ordered mapping
 SURAH_NAMES = [
     "Al-Fatihah", "Al-Baqarah", "Aal 'Imran", "An-Nisa'", "Al-Ma'idah", "Al-An'am", "Al-A'raf", "Al-Anfal", "At-Tawbah", "Yunus",
     "Hud", "Yusuf", "Ar-Ra'd", "Ibrahim", "Al-Hijr", "An-Nahl", "Al-Isra'", "Al-Kahf", "Maryam", "Ta-Ha",
@@ -41,6 +40,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
     data = response.json()
     verses = data.get('result', [])
+    total_verses = len(verses) # Dynamically calculated verse count
     
     base_dir = f"verses/{sura}"
     os.makedirs(base_dir, exist_ok=True)
@@ -64,10 +64,13 @@ for sura in range(1, TOTAL_SURAS + 1):
             surah_html += f"permalink: /{sura}/page{page_num}\n"
         surah_html += "---\n\n"
         
-        # Heading updated to show Surah Name
-        surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {surah_name}</h1>\n'
+        # Heading updated to show SVG layout, Name, and Verse count
+        surah_html += f'<div class="mb-8 flex flex-col items-center justify-center text-center">\n'
+        surah_html += f'  <img src="/assets/svg/{sura}.svg" alt="{surah_name}" class="h-16 w-auto mb-3 object-contain" />\n'
+        surah_html += f'  <h1 class="text-3xl font-bold text-slate-800">{surah_name}</h1>\n'
+        surah_html += f'  <p class="text-sm text-emerald-600 font-medium mt-1">({total_verses} Verses)</p>\n'
         if total_pages > 1:
-            surah_html += f'  <p class="text-sm text-slate-500 mt-1">Page {page_num} of {total_pages}</p>\n'
+            surah_html += f'  <p class="text-xs text-slate-400 mt-1">Page {page_num} of {total_pages}</p>\n'
         surah_html += '</div>\n\n'
         
         for v in chunk:
