@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <!-- The Tailwind CDN Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Elegant typography font for Arabic text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    .font-arabic { font-family: 'Amiri', serif; }
+  </style>
+<style type="text/tailwindcss">
+  @layer utilities {
+    /* Style rules mapping Tailwind classes to the script's elements */
+    .verse {
+      @apply bg-white border border-slate-200 p-6 rounded-xl shadow-xs my-6 transition-all hover:shadow-sm;
+    }
+    .single-verse {
+      @apply bg-white border border-slate-200 p-8 rounded-2xl shadow-sm max-w-3xl mx-auto my-12;
+    }
+    .verse p dir["rtl"], [dir="rtl"] {
+      @apply font-arabic text-right text-3xl text-slate-900 leading-widest my-4;
+    }
+    .verse p:not([dir="rtl"]) {
+      @apply text-base text-slate-700 leading-relaxed mt-2;
+    }
+    small, .verse small {
+      @apply block bg-slate-50 border-l-4 border-slate-300 p-3 text-xs text-slate-500 rounded-r-md mt-4 leading-normal;
+    }
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <nav class="bg-white border-b border-slate-200 py-4 shadow-xs">
+    <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
+      <a href="/" class="text-xl font-bold tracking-tight text-emerald-700">The Noble Qur'an</a>
+      <span class="text-xs text-slate-500 font-medium tracking-wide uppercase bg-slate-100 px-2.5 py-1 rounded-full">Hilali & Khan</span>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+    {{ content }}
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-sm text-slate-500">
+    <p>{{ site.title }}</p>
+  </footer>
+
+</body>
+</html>
