@@ -25,29 +25,28 @@ for sura in range(1, TOTAL_SURAS + 1):
     data = response.json()
     verses = data.get('result', [])
     
-    # Files are created inside "verses", but URLs stay clean!
+    # Files are created inside "verses"
     base_dir = f"verses/{sura}"
     os.makedirs(base_dir, exist_ok=True)
     
     # --- 1. PAGINATED SURAH PAGES ---
-    # Break verses down into clean chunks
     verse_chunks = list(chunk_list(verses, VERSES_PER_PAGE))
     total_pages = len(verse_chunks)
     
     for page_idx, chunk in enumerate(verse_chunks):
         page_num = page_idx + 1
         
-        # Keep public display URLs clean without /verses/
+        # FIXED: Both previous and next URLs now consistently include /alquran/
         prev_page_url = None if page_num == 1 else (f"/alquran/{sura}/" if page_num == 2 else f"/alquran/{sura}/page{page_num - 1}")
-        next_page_url = None if page_num == total_pages else f"/{sura}/page{page_num + 1}"
+        next_page_url = None if page_num == total_pages else f"/alquran/{sura}/page{page_num + 1}"
         
         # Build Front Matter
         surah_html = "---\nlayout: default\n"
         surah_html += f"title: \"Surah {sura} - Page {page_num}\"\n"
         if page_num == 1:
-            surah_html += f"permalink: /alquran/{sura}/\n"  # Clean URL
+            surah_html += f"permalink: /alquran/{sura}/\n"  
         else:
-            surah_html += f"permalink: /alquran/{sura}/page{page_num}\n"  # Clean URL
+            surah_html += f"permalink: /alquran/{sura}/page{page_num}\n"  
         surah_html += "---\n\n"
         
         surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {sura}</h1>\n'
@@ -56,24 +55,17 @@ for sura in range(1, TOTAL_SURAS + 1):
         surah_html += '</div>\n\n'
         
         for v in chunk:
-# Escape footnote text quotes cleanly so javascript functions won't crash
             clean_footnote = v["footnotes"].replace('"', '\\"').replace('\n', '\\n') if v["footnotes"] else ""
             
+            # FIXED: Internal single verse link updated to /alquran/{sura}/{aya}
             surah_html += f'<div class="relative bg-white border border-slate-200/70 p-6 sm:p-8 rounded-2xl shadow-xs hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group flex flex-col">\n'
-            
-            # Header line: Verse Meta Indicator + Anchor Link to Single Page
             surah_html += f'  <div class="flex justify-between items-center mb-6">\n'
             surah_html += f'    <span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50 px-2.5 py-1 border border-slate-200/60 rounded-md">Verse {v["sura"]}:{v["aya"]}</span>\n'
             surah_html += f'    <a href="/alquran/{sura}/{v["aya"]}" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1">Focus Verse &rarr;</a>\n'
             surah_html += f'  </div>\n'
-            
-            # Arabic Text Block
             surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl sm:text-4xl text-slate-950 leading-[2] tracking-wide my-4 select-all">{v["arabic_text"]}</p>\n'
-            
-            # English Translation Block
             surah_html += f'  <p class="text-slate-700 text-base sm:text-[17px] leading-relaxed mt-4 font-normal">{v["translation"]}</p>\n'
             
-            # Interactive Footnote Action trigger button
             if clean_footnote:
                 surah_html += f'  <div class="mt-6 pt-4 border-t border-slate-100 flex items-center">\n'
                 surah_html += f'    <button onclick="openFootnote(\'Surah {v["sura"]}:{v["aya"]} Commentary\', `{clean_footnote}`)" class="cursor-pointer inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100/80 px-3.5 py-2 rounded-xl border border-emerald-200/40 transition-colors">\n'
@@ -81,7 +73,6 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'      View Footnotes\n'
                 surah_html += f'    </button>\n'
                 surah_html += f'  </div>\n'
-                
             surah_html += '</div>\n\n'
             
         if total_pages > 1:
@@ -90,14 +81,13 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'  <a href="{prev_page_url}" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors">&larr; Previous Page</a>\n'
             else:
                 surah_html += '  <span class="text-slate-300 text-sm font-medium px-4 py-2">&larr; Previous Page</span>\n'
-                
             surah_html += f'  <span class="text-sm text-slate-500">Page {page_num} / {total_pages}</span>\n'
-            
             if next_page_url:
                 surah_html += f'  <a href="{next_page_url}" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors">Next Page &rarr;</a>\n'
             else:
                 surah_html += '  <span class="text-slate-300 text-sm font-medium px-4 py-2">Next Page &rarr;</span>\n'
             surah_html += '</div>\n'
+            
             
         filename = f"{base_dir}/index.html" if page_num == 1 else f"{base_dir}/page{page_num}.html"
         with open(filename, "w", encoding="utf-8") as f:
@@ -106,8 +96,8 @@ for sura in range(1, TOTAL_SURAS + 1):
     # --- 2. INDIVIDUAL VERSE PAGES ---
     for v in verses:
         aya = v["aya"]
-        # Public permalink strips out the 'verses/' folder layout!
-        verse_html = f"---\nlayout: default\ntitle: \"Surah {sura}, Verse {aya}\"\npermalink: /{sura}/{aya}\n---\n\n"
+        # FIXED: Base permalink updated to match layout with /alquran/ prefix
+        verse_html = f"---\nlayout: default\ntitle: \"Surah {sura}, Verse {aya}\"\npermalink: /alquran/{sura}/{aya}\n---\n\n"
         verse_html += f'<div class="single-verse">\n  <p class="text-emerald-700 font-bold mb-4"><strong>{sura}:{aya}</strong></p>\n'
         verse_html += f'  <p dir="rtl" style="text-align:right; font-size:32px;" class="font-arabic text-slate-900 leading-widest mb-6">{v["arabic_text"]}</p>\n'
         verse_html += f'  <p style="font-size:18px;" class="text-slate-800 leading-relaxed">{v["translation"]}</p>\n'
@@ -120,4 +110,4 @@ for sura in range(1, TOTAL_SURAS + 1):
             
     time.sleep(1)
 
-print("Static structure generated inside /verses/ with clean public URLs!")
+print("Static structure generated with unified /alquran/ routing parameters!")
