@@ -2,7 +2,7 @@ import os
 import requests
 import json
 import time
-import re  # Added for cleaning text patterns
+import re
 
 # Script configuration
 TRANSLATION = "english_hilali_khan"
@@ -95,24 +95,17 @@ for sura in range(1, TOTAL_SURAS + 1):
         for v in chunk:
             unique_id = f"fn-{sura}-{v['aya']}"
             
-            # --- PARSING & CLEANING LOGIC ---
             raw_translation = v["translation"]
-            # 1. Remove leading number pattern like "4. " or "112. "
             clean_translation = re.sub(r'^\d+\.\s*', '', raw_translation)
-            
-            # 2. Transform "[4]" references directly into a link that summons the modal popup
             footnote_link_markup = f'<button onclick="document.getElementById(\'{unique_id}\').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">\\1</button>'
             final_translation = re.sub(r'(\[\d+\])', footnote_link_markup, clean_translation)
             
             surah_html += f'  <div class="verse-card bg-white border border-slate-200 rounded-xl p-6 shadow-xs hover:border-emerald-500 hover:shadow-md transition-all duration-200">\n'
-            
-            # Card Top Header
             surah_html += f'    <div class="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">\n'
             surah_html += f'      <a href="/alquran/{sura}/{v["aya"]}" class="inline-flex items-center text-sm font-bold text-emerald-700 hover:text-emerald-600 transition-colors bg-emerald-50 px-2.5 py-1 rounded-md no-underline">\n'
             surah_html += f'        {v["sura"]}:{v["aya"]}\n'
             surah_html += f'      </a>\n'
             
-            # Standard Top Footnote Button (Kept as an alternative option)
             if v["footnotes"]:
                 surah_html += f'      <button onclick="document.getElementById(\'{unique_id}\').showModal()" class="inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-emerald-600 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-200 rounded-full px-3 py-1 transition-all cursor-pointer">\n'
                 surah_html += f'        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>\n'
@@ -120,12 +113,10 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'      </button>\n'
             surah_html += f'    </div>\n'
             
-            # Texts
             surah_html += f'    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">{v["arabic_text"]}</p>\n'
             surah_html += f'    <p class="text-slate-700 text-base leading-relaxed">{final_translation}</p>\n'
             surah_html += f'  </div>\n\n'
             
-            # Modal Popovers
             if v["footnotes"]:
                 surah_html += f'  <dialog id="{unique_id}" class="backdrop:bg-slate-900/40 w-full max-w-2xl m-0 mt-auto mb-0 md:mb-6 md:mx-auto rounded-t-2xl md:rounded-2xl border border-slate-200 bg-white p-0 shadow-2xl transition-all outline-none">\n'
                 surah_html += f'    <div class="flex items-center justify-between border-b border-slate-100 px-5 py-4 bg-slate-50 rounded-t-2xl">\n'
@@ -165,7 +156,6 @@ for sura in range(1, TOTAL_SURAS + 1):
         aya = v["aya"]
         unique_id = f"fn-single-{sura}-{aya}"
         
-        # Sync cleanup behavior on the single verse layout file pages too
         clean_translation = re.sub(r'^\d+\.\s*', '', v["translation"])
         footnote_link_markup = f'<button onclick="document.getElementById(\'{unique_id}\').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">\\1</button>'
         final_translation = re.sub(r'(\[\d+\])', footnote_link_markup, clean_translation)
@@ -173,7 +163,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         verse_html = f"---\nlayout: default\ntitle: \"Surah {surah_name}, Verse {aya}\"\npermalink: /{sura}/{aya}\n---\n\n"
         
         verse_html += f'<nav class="text-sm font-medium text-slate-500 mb-6">\n'
-        verse_html += f'  <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>\n'
+        verse_html += f'  <a href="/alquran" class="hover:text-emerald-600 transition-colors">Home</a>\n'
         verse_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
         verse_html += f'  <a href="/alquran/{sura}/" class="hover:text-emerald-600 transition-colors">Surah {surah_name}</a>\n'
         verse_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
@@ -209,5 +199,67 @@ for sura in range(1, TOTAL_SURAS + 1):
             f.write(verse_html)
             
     time.sleep(1)
+
+# --- 3. GENERATE ROOT CHAPTERS INDEX PAGE ---
+print("Generating root chapters indexing page...")
+os.makedirs("verses", exist_ok=True)
+
+index_html = "---\nlayout: default\ntitle: \"Al-Quran Chapters\"\npermalink: /alquran/\n---\n\n"
+
+index_html += '<div class="max-w-5xl mx-auto px-4 py-8">\n'
+index_html += '  <div class="text-center mb-12">\n'
+index_html += '    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">The Holy Al-Quran</h1>\n'
+index_html += '    <p class="text-slate-500 max-w-md mx-auto">Select a Surah index chapter below to read translations and verse footnotes.</p>\n'
+index_html += '  </div>\n\n'
+
+# Live client-side Search Bar feature
+index_html += '  <div class="mb-8 max-w-md mx-auto">\n'
+index_html += '    <div class="relative">\n'
+index_html += '      <input type="text" id="searchSurah" onkeyup="filterSurahs()" placeholder="Search Surah by name..." class="w-full rounded-xl border border-slate-200 bg-white pl-10 pr-4 py-3 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" />\n'
+index_html += '      <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">\n'
+index_html += '        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>\n'
+index_html += '      </span>\n'
+index_html += '    </div>\n'
+index_html += '  </div>\n\n'
+
+# Responsive Chapter Grid Layout
+index_html += '  <div id="surahGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">\n'
+for idx, name in enumerate(SURAH_NAMES):
+    s_num = idx + 1
+    index_html += f'    <a href="/alquran/{s_num}/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
+    index_html += f'      <div class="flex items-center gap-4">\n'
+    index_html += f'        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">{s_num}</span>\n'
+    index_html += f'        <div>\n'
+    index_html += f'          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">{name}</h2>\n'
+    index_html += f'        </div>\n'
+    index_html += f'      </div>\n'
+    index_html += f'      <div class="shrink-0 pl-2">\n'
+    index_html += f'        <img src="{{{{ site.url }}}}/assets/svg/{s_num}.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display=\'none\'" />\n'
+    index_html += f'      </div>\n'
+    index_html += f'    </a>\n'
+index_html += '  </div>\n'
+index_html += '</div>\n\n'
+
+# Fast client-side searching logic code injection
+index_html += '<script>\n'
+index_html += 'function filterSurahs() {\n'
+index_html += '  var input = document.getElementById("searchSurah");\n'
+index_html += '  var filter = input.value.toLowerCase();\n'
+index_html += '  var grid = document.getElementById("surahGrid");\n'
+index_html += '  var items = grid.getElementsByClassName("surah-item");\n'
+index_html += '  for (var i = 0; i < items.length; i++) {\n'
+index_html += '    var title = items[i].getElementsByTagName("h2")[0];\n'
+index_html += '    var txtValue = title.textContent || title.innerText;\n'
+index_html += '    if (txtValue.toLowerCase().indexOf(filter) > -1) {\n'
+index_html += '      items[i].style.display = "";\n'
+index_html += '    } else {\n'
+index_html += '      items[i].style.display = "none";\n'
+index_html += '    }\n'
+index_html += '  }\n'
+index_html += '}\n'
+index_html += '</script>\n'
+
+with open("verses/index.html", "w", encoding="utf-8") as f:
+    f.write(index_html)
 
 print("Static structure generated inside /verses/ with clean public URLs!")

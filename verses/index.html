@@ -1,0 +1,1296 @@
+---
+layout: default
+title: "Al-Quran Chapters"
+permalink: /alquran/
+---
+
+<div class="max-w-5xl mx-auto px-4 py-8">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">The Holy Al-Quran</h1>
+    <p class="text-slate-500 max-w-md mx-auto">Select a Surah index chapter below to read translations and verse footnotes.</p>
+  </div>
+
+  <div class="mb-8 max-w-md mx-auto">
+    <div class="relative">
+      <input type="text" id="searchSurah" onkeyup="filterSurahs()" placeholder="Search Surah by name..." class="w-full rounded-xl border border-slate-200 bg-white pl-10 pr-4 py-3 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" />
+      <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+      </span>
+    </div>
+  </div>
+
+  <div id="surahGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <a href="/alquran/1/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">1</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Fatihah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/1.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/2/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">2</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Baqarah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/2.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/3/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">3</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Aal 'Imran</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/3.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/4/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">4</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Nisa'</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/4.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/5/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">5</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ma'idah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/5.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/6/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">6</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-An'am</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/6.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/7/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">7</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-A'raf</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/7.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/8/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">8</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Anfal</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/8.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/9/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">9</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Tawbah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/9.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/10/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">10</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Yunus</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/10.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/11/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">11</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Hud</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/11.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/12/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">12</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Yusuf</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/12.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/13/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">13</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ar-Ra'd</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/13.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/14/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">14</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ibrahim</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/14.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/15/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">15</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Hijr</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/15.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/16/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">16</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Nahl</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/16.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/17/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">17</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Isra'</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/17.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/18/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">18</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Kahf</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/18.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/19/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">19</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Maryam</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/19.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/20/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">20</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ta-Ha</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/20.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/21/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">21</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Anbiya'</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/21.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/22/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">22</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Hajj</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/22.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/23/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">23</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Mu'minun</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/23.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/24/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">24</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Nur</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/24.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/25/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">25</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Furqan</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/25.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/26/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">26</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ash-Shu'ara'</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/26.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/27/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">27</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Naml</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/27.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/28/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">28</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Qasas</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/28.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/29/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">29</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ankabut</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/29.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/30/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">30</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ar-Rum</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/30.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/31/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">31</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Luqman</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/31.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/32/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">32</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">As-Sajdah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/32.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/33/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">33</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ahzab</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/33.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/34/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">34</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Saba'</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/34.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/35/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">35</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Fatir</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/35.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/36/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">36</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ya-Sin</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/36.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/37/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">37</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">As-Saffat</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/37.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/38/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">38</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Sad</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/38.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/39/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">39</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Az-Zumar</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/39.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/40/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">40</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ghafir</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/40.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/41/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">41</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Fussilat</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/41.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/42/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">42</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ash-Shura</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/42.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/43/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">43</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Az-Zukhruf</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/43.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/44/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">44</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ad-Dukhan</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/44.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/45/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">45</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Jathiyah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/45.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/46/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">46</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ahqaf</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/46.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/47/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">47</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Muhammad</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/47.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/48/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">48</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Fath</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/48.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/49/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">49</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Hujurat</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/49.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/50/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">50</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Qaf</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/50.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/51/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">51</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Adh-Dhariyat</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/51.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/52/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">52</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Tur</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/52.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/53/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">53</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Najm</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/53.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/54/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">54</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Qamar</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/54.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/55/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">55</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ar-Rahman</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/55.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/56/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">56</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Waqi'ah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/56.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/57/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">57</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Hadid</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/57.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/58/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">58</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Mujadilah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/58.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/59/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">59</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Hashr</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/59.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/60/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">60</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Mumtahanah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/60.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/61/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">61</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">As-Saff</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/61.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/62/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">62</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Jumu'ah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/62.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/63/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">63</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Munafiqun</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/63.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/64/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">64</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Taghabun</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/64.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/65/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">65</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Talaq</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/65.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/66/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">66</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Tahrim</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/66.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/67/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">67</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Mulk</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/67.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/68/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">68</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Qalam</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/68.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/69/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">69</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Haqqah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/69.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/70/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">70</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ma'arij</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/70.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/71/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">71</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Nuh</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/71.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/72/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">72</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Jinn</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/72.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/73/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">73</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Muzzammil</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/73.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/74/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">74</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Muddaththir</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/74.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/75/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">75</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Qiyamah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/75.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/76/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">76</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Insan</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/76.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/77/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">77</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Mursalat</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/77.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/78/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">78</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Naba'</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/78.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/79/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">79</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Nazi'at</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/79.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/80/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">80</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">'Abasa</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/80.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/81/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">81</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Takwir</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/81.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/82/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">82</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Infitar</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/82.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/83/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">83</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Mutaffifin</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/83.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/84/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">84</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Inshiqaq</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/84.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/85/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">85</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Buruj</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/85.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/86/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">86</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Tariq</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/86.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/87/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">87</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-A'la</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/87.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/88/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">88</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ghashiyah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/88.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/89/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">89</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Fajr</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/89.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/90/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">90</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Balad</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/90.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/91/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">91</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ash-Shams</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/91.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/92/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">92</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Layl</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/92.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/93/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">93</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ad-Duha</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/93.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/94/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">94</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Ash-Sharh</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/94.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/95/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">95</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Tin</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/95.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/96/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">96</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-'Alaq</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/96.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/97/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">97</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Qadr</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/97.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/98/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">98</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Bayyinah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/98.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/99/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">99</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Az-Zalzalah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/99.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/100/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">100</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-'Adiyat</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/100.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/101/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">101</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Qari'ah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/101.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/102/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">102</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">At-Takathur</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/102.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/103/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">103</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-'Asr</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/103.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/104/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">104</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Humazah</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/104.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/105/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">105</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Fil</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/105.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/106/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">106</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Quraysh</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/106.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/107/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">107</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ma'un</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/107.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/108/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">108</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Kauthar</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/108.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/109/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">109</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Kafirun</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/109.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/110/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">110</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Nasr</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/110.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/111/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">111</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Masad</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/111.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/112/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">112</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Ikhlas</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/112.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/113/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">113</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">Al-Falaq</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/113.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+    <a href="/alquran/114/" class="surah-item group flex items-center justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">
+      <div class="flex items-center gap-4">
+        <span class="w-9 h-9 flex items-center justify-center bg-slate-50 text-slate-600 font-bold text-xs rounded-lg group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">114</span>
+        <div>
+          <h2 class="text-base font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors m-0">An-Nas</h2>
+        </div>
+      </div>
+      <div class="shrink-0 pl-2">
+        <img src="{{ site.url }}/assets/svg/114.svg" alt="" class="h-8 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'" />
+      </div>
+    </a>
+  </div>
+</div>
+
+<script>
+function filterSurahs() {
+  var input = document.getElementById("searchSurah");
+  var filter = input.value.toLowerCase();
+  var grid = document.getElementById("surahGrid");
+  var items = grid.getElementsByClassName("surah-item");
+  for (var i = 0; i < items.length; i++) {
+    var title = items[i].getElementsByTagName("h2")[0];
+    var txtValue = title.textContent || title.innerText;
+    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+</script>
