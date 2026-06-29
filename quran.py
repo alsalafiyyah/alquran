@@ -65,7 +65,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         
         # Chapter Breadcrumb
         surah_html += f'<nav class="text-sm font-medium text-slate-500 mb-6">\n'
-        surah_html += f'  <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>\n'
+        surah_html += f'  <a href="/alquran" class="hover:text-emerald-600 transition-colors">Home</a>\n'
         surah_html += f'  <span class="mx-2 text-slate-300">/</span>\n'
         surah_html += f'  <span class="text-slate-800">Surah {surah_name}</span>\n'
         surah_html += f'</nav>\n\n'
