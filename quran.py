@@ -79,7 +79,7 @@ for sura in range(1, TOTAL_SURAS + 1):
             surah_html += f'  <p class="text-xs text-slate-400 mt-1">Page {page_num} of {total_pages}</p>\n'
         surah_html += '</div>\n\n'
         
-        # Verse Dropdown Navigation (Tailwind Select Form)
+        # Verse Dropdown Navigation
         surah_html += f'<div class="mb-8 max-w-xs mx-auto">\n'
         surah_html += f'  <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>\n'
         surah_html += f'  <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">\n'
@@ -90,14 +90,45 @@ for sura in range(1, TOTAL_SURAS + 1):
         surah_html += f'</div>\n\n'
         
         # Verses Listing
+        surah_html += '<div class="space-y-6">\n'
         for v in chunk:
-            surah_html += f'<a href="/alquran/{sura}/{v["aya"]}" class="verse block group hover:border-emerald-500 hover:shadow-md transition-all duration-200 no-underline">\n'
-            surah_html += f'  <p class="text-emerald-700 font-bold group-hover:text-emerald-600"><strong>{v["sura"]}:{v["aya"]}</strong></p>\n'
-            surah_html += '</a>\n\n'
-            surah_html += f'  <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-4">{v["arabic_text"]}</p>\n'
-            surah_html += f'  <p class="text-slate-700 leading-relaxed mt-2">{v["translation"]}</p>\n'
+            unique_id = f"fn-{sura}-{v['aya']}"
+            surah_html += f'  <div class="verse-card bg-white border border-slate-200 rounded-xl p-6 shadow-xs hover:border-emerald-500 hover:shadow-md transition-all duration-200">\n'
+            
+            # Card Top Header
+            surah_html += f'    <div class="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">\n'
+            surah_html += f'      <a href="/alquran/{sura}/{v["aya"]}" class="inline-flex items-center text-sm font-bold text-emerald-700 hover:text-emerald-600 transition-colors bg-emerald-50 px-2.5 py-1 rounded-md no-underline">\n'
+            surah_html += f'        {v["sura"]}:{v["aya"]}\n'
+            surah_html += f'      </a>\n'
+            
+            # Interactive Footnote Badge (Only displays if footnotes exist)
             if v["footnotes"]:
-                surah_html += f'  <small style="color:gray;">{v["footnotes"]}</small>\n'
+                surah_html += f'      <button onclick="document.getElementById(\'{unique_id}\').showModal()" class="inline-flex items-center gap-1 text-xs font-medium text-slate-500 hover:text-emerald-600 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-200 rounded-full px-3 py-1 transition-all cursor-pointer">\n'
+                surah_html += f'        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>\n'
+                surah_html += f'        Footnote\n'
+                surah_html += f'      </button>\n'
+            surah_html += f'    </div>\n'
+            
+            # Texts
+            surah_html += f'    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">{v["arabic_text"]}</p>\n'
+            surah_html += f'    <p class="text-slate-700 text-base leading-relaxed">{v["translation"]}</p>\n'
+            surah_html += f'  </div>\n\n'
+            
+            # Native Static Bottom Sheet Modal for Footnotes
+            if v["footnotes"]:
+                surah_html += f'  <dialog id="{unique_id}" class="backdrop:bg-slate-900/40 w-full max-w-2xl m-0 mt-auto mb-0 md:mb-6 md:mx-auto rounded-t-2xl md:rounded-2xl border border-slate-200 bg-white p-0 shadow-2xl transition-all outline-none">\n'
+                surah_html += f'    <div class="flex items-center justify-between border-b border-slate-100 px-5 py-4 bg-slate-50 rounded-t-2xl">\n'
+                surah_html += f'      <h3 class="text-sm font-bold text-slate-800">Footnote — Verse {v["sura"]}:{v["aya"]}</h3>\n'
+                surah_html += f'      <button onclick="document.getElementById(\'{unique_id}\').close()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-200/60 transition-colors cursor-pointer">\n'
+                surah_html += f'        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>\n'
+                surah_html += f'      </button>\n'
+                surah_html += f'    </div>\n'
+                surah_html += f'    <div class="p-6 text-sm text-slate-600 leading-relaxed max-h-[40vh] overflow-y-auto">\n'
+                surah_html += f'      {v["footnotes"]}\n'
+                surah_html += f'    </div>\n'
+                surah_html += f'  </dialog>\n\n'
+
+        surah_html += '</div>\n\n'
             
         if total_pages > 1:
             surah_html += '<div class="flex justify-between items-center my-12 pt-6 border-t border-slate-200">\n'
