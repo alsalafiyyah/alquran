@@ -1,0 +1,27 @@
+---
+layout: default
+title: "The Noble Quran"
+---
+
+<div style="text-align: center; margin-bottom: 40px;">
+  <h1>The Noble Quran</h1>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 15px; padding: 10px;">
+  {% for i in (1..114) %}
+    <a href="/{{ i }}/" style="
+      display: block; 
+      text-align: center; 
+      padding: 15px; 
+      background: #f8f9fa; 
+      border: 1px solid #e9ecef; 
+      border-radius: 6px; 
+      text-decoration: none; 
+      color: #333; 
+      font-weight: bold;
+      transition: all 0.2s ease;
+    " onmouseover="this.style.background='#e2e6ea'" onmouseout="this.style.background='#f8f9fa'">
+      Surah {{ i }}
+    </a>
+  {% endfor %}
+</div>
