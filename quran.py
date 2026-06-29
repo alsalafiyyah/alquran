@@ -40,16 +40,16 @@ for sura in range(1, TOTAL_SURAS + 1):
         if page_num == 1:
             prev_page_url = None
             next_page_url = f"/alquran/{sura}/page2" if total_pages > 1 else None
-            current_permalink = f"/alquran/{sura}" # Removes trailing slash to force clean mapping
+            current_permalink = f"/{sura}" # Removes trailing slash to force clean mapping
         else:
             prev_page_url = f"/alquran/{sura}" if page_num == 2 else f"/alquran/{sura}/page{page_num - 1}"
             next_page_url = None if page_num == total_pages else f"/alquran/{sura}/page{page_num + 1}"
-            current_permalink = f"/alquran/{sura}/page{page_num}"
+            current_permalink = f"/{sura}/page{page_num}"
         
         # Build Front Matter
         surah_html = "---\nlayout: default\n"
         surah_html += f"title: \"Surah {sura} - Page {page_num}\"\n"
-        surah_html += f"permalink: {current_permalink}\n" # Fixed unified permalink
+        surah_html += f"permalink: {current_permalink}\n" 
         surah_html += "---\n\n"
         
         surah_html += f'<div class="mb-8 text-center">\n  <h1 class="text-3xl font-bold">Surah {sura}</h1>\n'
