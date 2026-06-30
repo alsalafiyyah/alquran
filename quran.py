@@ -80,16 +80,33 @@ for sura in range(1, TOTAL_SURAS + 1):
             surah_html += f'  <p class="text-xs text-slate-400 mt-1">Page {page_num} of {total_pages}</p>\n'
         surah_html += '</div>\n\n'
         
-        # Verse Dropdown Navigation
-        surah_html += f'<div class="mb-8 max-w-xs mx-auto">\n'
-        surah_html += f'  <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>\n'
-        surah_html += f'  <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">\n'
-        surah_html += f'    <option value="">Select verse...</option>\n'
-        for total_v in verses:
-            surah_html += f'    <option value="/alquran/{sura}/{total_v["aya"]}">Verse {total_v["aya"]}</option>\n'
-        surah_html += f'  </select>\n'
-        surah_html += f'</div>\n\n'
+
+        # --- Verse & Chapter Dropdown Navigation ---
+        surah_html += f'<div class="mb-8 flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">\n'
         
+        # 1. Chapter Switcher Dropdown
+        surah_html += f'  <div class="flex-1">\n'
+        surah_html += f'    <label for="chapter-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Surah</label>\n'
+        surah_html += f'    <select id="chapter-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">\n'
+        for idx, name in enumerate(SURAH_NAMES):
+            ch_num = idx + 1
+            is_selected = "selected" if ch_num == sura else ""
+            surah_html += f'      <option value="/alquran/{ch_num}/" {is_selected}>Surah {ch_num}: {name}</option>\n'
+        surah_html += f'    </select>\n'
+        surah_html += f'  </div>\n\n'
+        
+        # 2. Verse Switcher Dropdown
+        surah_html += f'  <div class="flex-1">\n'
+        surah_html += f'    <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>\n'
+        surah_html += f'    <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">\n'
+        surah_html += f'      <option value="">Select verse...</option>\n'
+        for total_v in verses:
+            surah_html += f'      <option value="/alquran/{sura}/{total_v["aya"]}">Verse {total_v["aya"]}</option>\n'
+        surah_html += f'    </select>\n'
+        surah_html += f'  </div>\n'
+        
+        surah_html += f'</div>\n\n'
+
         # Verses Listing
         surah_html += '<div class="space-y-6">\n'
         for v in chunk:
@@ -113,7 +130,7 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'      </button>\n'
             surah_html += f'    </div>\n'
             
-            surah_html += f'    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">{v["arabic_text"]}</p>\n'
+            surah_html += f'    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">{v["arabic_text"]}</p>\n'
             surah_html += f'    <p class="text-slate-700 text-base leading-relaxed">{final_translation}</p>\n'
             surah_html += f'  </div>\n\n'
             

@@ -16,31 +16,153 @@ permalink: /90/
   <p class="text-sm text-emerald-600 font-medium mt-1">(20 Verses)</p>
 </div>
 
-<div class="mb-8 max-w-xs mx-auto">
-  <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>
-  <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
-    <option value="">Select verse...</option>
-    <option value="/alquran/90/1">Verse 1</option>
-    <option value="/alquran/90/2">Verse 2</option>
-    <option value="/alquran/90/3">Verse 3</option>
-    <option value="/alquran/90/4">Verse 4</option>
-    <option value="/alquran/90/5">Verse 5</option>
-    <option value="/alquran/90/6">Verse 6</option>
-    <option value="/alquran/90/7">Verse 7</option>
-    <option value="/alquran/90/8">Verse 8</option>
-    <option value="/alquran/90/9">Verse 9</option>
-    <option value="/alquran/90/10">Verse 10</option>
-    <option value="/alquran/90/11">Verse 11</option>
-    <option value="/alquran/90/12">Verse 12</option>
-    <option value="/alquran/90/13">Verse 13</option>
-    <option value="/alquran/90/14">Verse 14</option>
-    <option value="/alquran/90/15">Verse 15</option>
-    <option value="/alquran/90/16">Verse 16</option>
-    <option value="/alquran/90/17">Verse 17</option>
-    <option value="/alquran/90/18">Verse 18</option>
-    <option value="/alquran/90/19">Verse 19</option>
-    <option value="/alquran/90/20">Verse 20</option>
-  </select>
+<div class="mb-8 flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+  <div class="flex-1">
+    <label for="chapter-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Surah</label>
+    <select id="chapter-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">
+      <option value="/alquran/1/" >Surah 1: Al-Fatihah</option>
+      <option value="/alquran/2/" >Surah 2: Al-Baqarah</option>
+      <option value="/alquran/3/" >Surah 3: Aal 'Imran</option>
+      <option value="/alquran/4/" >Surah 4: An-Nisa'</option>
+      <option value="/alquran/5/" >Surah 5: Al-Ma'idah</option>
+      <option value="/alquran/6/" >Surah 6: Al-An'am</option>
+      <option value="/alquran/7/" >Surah 7: Al-A'raf</option>
+      <option value="/alquran/8/" >Surah 8: Al-Anfal</option>
+      <option value="/alquran/9/" >Surah 9: At-Tawbah</option>
+      <option value="/alquran/10/" >Surah 10: Yunus</option>
+      <option value="/alquran/11/" >Surah 11: Hud</option>
+      <option value="/alquran/12/" >Surah 12: Yusuf</option>
+      <option value="/alquran/13/" >Surah 13: Ar-Ra'd</option>
+      <option value="/alquran/14/" >Surah 14: Ibrahim</option>
+      <option value="/alquran/15/" >Surah 15: Al-Hijr</option>
+      <option value="/alquran/16/" >Surah 16: An-Nahl</option>
+      <option value="/alquran/17/" >Surah 17: Al-Isra'</option>
+      <option value="/alquran/18/" >Surah 18: Al-Kahf</option>
+      <option value="/alquran/19/" >Surah 19: Maryam</option>
+      <option value="/alquran/20/" >Surah 20: Ta-Ha</option>
+      <option value="/alquran/21/" >Surah 21: Al-Anbiya'</option>
+      <option value="/alquran/22/" >Surah 22: Al-Hajj</option>
+      <option value="/alquran/23/" >Surah 23: Al-Mu'minun</option>
+      <option value="/alquran/24/" >Surah 24: An-Nur</option>
+      <option value="/alquran/25/" >Surah 25: Al-Furqan</option>
+      <option value="/alquran/26/" >Surah 26: Ash-Shu'ara'</option>
+      <option value="/alquran/27/" >Surah 27: An-Naml</option>
+      <option value="/alquran/28/" >Surah 28: Al-Qasas</option>
+      <option value="/alquran/29/" >Surah 29: Al-Ankabut</option>
+      <option value="/alquran/30/" >Surah 30: Ar-Rum</option>
+      <option value="/alquran/31/" >Surah 31: Luqman</option>
+      <option value="/alquran/32/" >Surah 32: As-Sajdah</option>
+      <option value="/alquran/33/" >Surah 33: Al-Ahzab</option>
+      <option value="/alquran/34/" >Surah 34: Saba'</option>
+      <option value="/alquran/35/" >Surah 35: Fatir</option>
+      <option value="/alquran/36/" >Surah 36: Ya-Sin</option>
+      <option value="/alquran/37/" >Surah 37: As-Saffat</option>
+      <option value="/alquran/38/" >Surah 38: Sad</option>
+      <option value="/alquran/39/" >Surah 39: Az-Zumar</option>
+      <option value="/alquran/40/" >Surah 40: Ghafir</option>
+      <option value="/alquran/41/" >Surah 41: Fussilat</option>
+      <option value="/alquran/42/" >Surah 42: Ash-Shura</option>
+      <option value="/alquran/43/" >Surah 43: Az-Zukhruf</option>
+      <option value="/alquran/44/" >Surah 44: Ad-Dukhan</option>
+      <option value="/alquran/45/" >Surah 45: Al-Jathiyah</option>
+      <option value="/alquran/46/" >Surah 46: Al-Ahqaf</option>
+      <option value="/alquran/47/" >Surah 47: Muhammad</option>
+      <option value="/alquran/48/" >Surah 48: Al-Fath</option>
+      <option value="/alquran/49/" >Surah 49: Al-Hujurat</option>
+      <option value="/alquran/50/" >Surah 50: Qaf</option>
+      <option value="/alquran/51/" >Surah 51: Adh-Dhariyat</option>
+      <option value="/alquran/52/" >Surah 52: At-Tur</option>
+      <option value="/alquran/53/" >Surah 53: An-Najm</option>
+      <option value="/alquran/54/" >Surah 54: Al-Qamar</option>
+      <option value="/alquran/55/" >Surah 55: Ar-Rahman</option>
+      <option value="/alquran/56/" >Surah 56: Al-Waqi'ah</option>
+      <option value="/alquran/57/" >Surah 57: Al-Hadid</option>
+      <option value="/alquran/58/" >Surah 58: Al-Mujadilah</option>
+      <option value="/alquran/59/" >Surah 59: Al-Hashr</option>
+      <option value="/alquran/60/" >Surah 60: Al-Mumtahanah</option>
+      <option value="/alquran/61/" >Surah 61: As-Saff</option>
+      <option value="/alquran/62/" >Surah 62: Al-Jumu'ah</option>
+      <option value="/alquran/63/" >Surah 63: Al-Munafiqun</option>
+      <option value="/alquran/64/" >Surah 64: At-Taghabun</option>
+      <option value="/alquran/65/" >Surah 65: At-Talaq</option>
+      <option value="/alquran/66/" >Surah 66: At-Tahrim</option>
+      <option value="/alquran/67/" >Surah 67: Al-Mulk</option>
+      <option value="/alquran/68/" >Surah 68: Al-Qalam</option>
+      <option value="/alquran/69/" >Surah 69: Al-Haqqah</option>
+      <option value="/alquran/70/" >Surah 70: Al-Ma'arij</option>
+      <option value="/alquran/71/" >Surah 71: Nuh</option>
+      <option value="/alquran/72/" >Surah 72: Al-Jinn</option>
+      <option value="/alquran/73/" >Surah 73: Al-Muzzammil</option>
+      <option value="/alquran/74/" >Surah 74: Al-Muddaththir</option>
+      <option value="/alquran/75/" >Surah 75: Al-Qiyamah</option>
+      <option value="/alquran/76/" >Surah 76: Al-Insan</option>
+      <option value="/alquran/77/" >Surah 77: Al-Mursalat</option>
+      <option value="/alquran/78/" >Surah 78: An-Naba'</option>
+      <option value="/alquran/79/" >Surah 79: An-Nazi'at</option>
+      <option value="/alquran/80/" >Surah 80: 'Abasa</option>
+      <option value="/alquran/81/" >Surah 81: At-Takwir</option>
+      <option value="/alquran/82/" >Surah 82: Al-Infitar</option>
+      <option value="/alquran/83/" >Surah 83: Al-Mutaffifin</option>
+      <option value="/alquran/84/" >Surah 84: Al-Inshiqaq</option>
+      <option value="/alquran/85/" >Surah 85: Al-Buruj</option>
+      <option value="/alquran/86/" >Surah 86: At-Tariq</option>
+      <option value="/alquran/87/" >Surah 87: Al-A'la</option>
+      <option value="/alquran/88/" >Surah 88: Al-Ghashiyah</option>
+      <option value="/alquran/89/" >Surah 89: Al-Fajr</option>
+      <option value="/alquran/90/" selected>Surah 90: Al-Balad</option>
+      <option value="/alquran/91/" >Surah 91: Ash-Shams</option>
+      <option value="/alquran/92/" >Surah 92: Al-Layl</option>
+      <option value="/alquran/93/" >Surah 93: Ad-Duha</option>
+      <option value="/alquran/94/" >Surah 94: Ash-Sharh</option>
+      <option value="/alquran/95/" >Surah 95: At-Tin</option>
+      <option value="/alquran/96/" >Surah 96: Al-'Alaq</option>
+      <option value="/alquran/97/" >Surah 97: Al-Qadr</option>
+      <option value="/alquran/98/" >Surah 98: Al-Bayyinah</option>
+      <option value="/alquran/99/" >Surah 99: Az-Zalzalah</option>
+      <option value="/alquran/100/" >Surah 100: Al-'Adiyat</option>
+      <option value="/alquran/101/" >Surah 101: Al-Qari'ah</option>
+      <option value="/alquran/102/" >Surah 102: At-Takathur</option>
+      <option value="/alquran/103/" >Surah 103: Al-'Asr</option>
+      <option value="/alquran/104/" >Surah 104: Al-Humazah</option>
+      <option value="/alquran/105/" >Surah 105: Al-Fil</option>
+      <option value="/alquran/106/" >Surah 106: Quraysh</option>
+      <option value="/alquran/107/" >Surah 107: Al-Ma'un</option>
+      <option value="/alquran/108/" >Surah 108: Al-Kauthar</option>
+      <option value="/alquran/109/" >Surah 109: Al-Kafirun</option>
+      <option value="/alquran/110/" >Surah 110: An-Nasr</option>
+      <option value="/alquran/111/" >Surah 111: Al-Masad</option>
+      <option value="/alquran/112/" >Surah 112: Al-Ikhlas</option>
+      <option value="/alquran/113/" >Surah 113: Al-Falaq</option>
+      <option value="/alquran/114/" >Surah 114: An-Nas</option>
+    </select>
+  </div>
+
+  <div class="flex-1">
+    <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>
+    <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">
+      <option value="">Select verse...</option>
+      <option value="/alquran/90/1">Verse 1</option>
+      <option value="/alquran/90/2">Verse 2</option>
+      <option value="/alquran/90/3">Verse 3</option>
+      <option value="/alquran/90/4">Verse 4</option>
+      <option value="/alquran/90/5">Verse 5</option>
+      <option value="/alquran/90/6">Verse 6</option>
+      <option value="/alquran/90/7">Verse 7</option>
+      <option value="/alquran/90/8">Verse 8</option>
+      <option value="/alquran/90/9">Verse 9</option>
+      <option value="/alquran/90/10">Verse 10</option>
+      <option value="/alquran/90/11">Verse 11</option>
+      <option value="/alquran/90/12">Verse 12</option>
+      <option value="/alquran/90/13">Verse 13</option>
+      <option value="/alquran/90/14">Verse 14</option>
+      <option value="/alquran/90/15">Verse 15</option>
+      <option value="/alquran/90/16">Verse 16</option>
+      <option value="/alquran/90/17">Verse 17</option>
+      <option value="/alquran/90/18">Verse 18</option>
+      <option value="/alquran/90/19">Verse 19</option>
+      <option value="/alquran/90/20">Verse 20</option>
+    </select>
+  </div>
 </div>
 
 <div class="space-y-6">
@@ -50,7 +172,7 @@ permalink: /90/
         90:1
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">لَآ أُقۡسِمُ بِهَٰذَا ٱلۡبَلَدِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">لَآ أُقۡسِمُ بِهَٰذَا ٱلۡبَلَدِ</p>
     <p class="text-slate-700 text-base leading-relaxed">I swear by this city (Makkah);</p>
   </div>
 
@@ -64,7 +186,7 @@ permalink: /90/
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنتَ حِلُّۢ بِهَٰذَا ٱلۡبَلَدِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنتَ حِلُّۢ بِهَٰذَا ٱلۡبَلَدِ</p>
     <p class="text-slate-700 text-base leading-relaxed">And you are free (from sin, and to punish the enemies of Islâm on the Day of the conquest) in this city (Makkah).<button onclick="document.getElementById('fn-90-2').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[1]</button></p>
   </div>
 
@@ -88,7 +210,7 @@ b) See the footnote of (V.2:191).
         90:3
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَوَالِدٖ وَمَا وَلَدَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَوَالِدٖ وَمَا وَلَدَ</p>
     <p class="text-slate-700 text-base leading-relaxed">And by the begetter (i.e. Adam عليه السلام) and that which he begot (i.e. his progeny).</p>
   </div>
 
@@ -98,7 +220,7 @@ b) See the footnote of (V.2:191).
         90:4
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">لَقَدۡ خَلَقۡنَا ٱلۡإِنسَٰنَ فِي كَبَدٍ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">لَقَدۡ خَلَقۡنَا ٱلۡإِنسَٰنَ فِي كَبَدٍ</p>
     <p class="text-slate-700 text-base leading-relaxed">Verily, We have created man in toil.</p>
   </div>
 
@@ -108,7 +230,7 @@ b) See the footnote of (V.2:191).
         90:5
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَيَحۡسَبُ أَن لَّن يَقۡدِرَ عَلَيۡهِ أَحَدٞ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَيَحۡسَبُ أَن لَّن يَقۡدِرَ عَلَيۡهِ أَحَدٞ</p>
     <p class="text-slate-700 text-base leading-relaxed">Does he think that none can overcome him?</p>
   </div>
 
@@ -118,7 +240,7 @@ b) See the footnote of (V.2:191).
         90:6
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">يَقُولُ أَهۡلَكۡتُ مَالٗا لُّبَدًا</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">يَقُولُ أَهۡلَكۡتُ مَالٗا لُّبَدًا</p>
     <p class="text-slate-700 text-base leading-relaxed">He says (boastfully): "I have wasted wealth in abundance!"</p>
   </div>
 
@@ -128,7 +250,7 @@ b) See the footnote of (V.2:191).
         90:7
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَيَحۡسَبُ أَن لَّمۡ يَرَهُۥٓ أَحَدٌ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَيَحۡسَبُ أَن لَّمۡ يَرَهُۥٓ أَحَدٌ</p>
     <p class="text-slate-700 text-base leading-relaxed">Does he think that none sees him?</p>
   </div>
 
@@ -138,7 +260,7 @@ b) See the footnote of (V.2:191).
         90:8
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَلَمۡ نَجۡعَل لَّهُۥ عَيۡنَيۡنِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَلَمۡ نَجۡعَل لَّهُۥ عَيۡنَيۡنِ</p>
     <p class="text-slate-700 text-base leading-relaxed">Have We not made for him two eyes,</p>
   </div>
 
@@ -148,7 +270,7 @@ b) See the footnote of (V.2:191).
         90:9
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَلِسَانٗا وَشَفَتَيۡنِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَلِسَانٗا وَشَفَتَيۡنِ</p>
     <p class="text-slate-700 text-base leading-relaxed">And a tongue and two lips?</p>
   </div>
 
@@ -158,7 +280,7 @@ b) See the footnote of (V.2:191).
         90:10
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَهَدَيۡنَٰهُ ٱلنَّجۡدَيۡنِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَهَدَيۡنَٰهُ ٱلنَّجۡدَيۡنِ</p>
     <p class="text-slate-700 text-base leading-relaxed">And shown him the two ways (good and evil)?</p>
   </div>
 
@@ -168,7 +290,7 @@ b) See the footnote of (V.2:191).
         90:11
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">فَلَا ٱقۡتَحَمَ ٱلۡعَقَبَةَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">فَلَا ٱقۡتَحَمَ ٱلۡعَقَبَةَ</p>
     <p class="text-slate-700 text-base leading-relaxed">But he has not attempted to pass on the path that is steep (i.e. the path which will lead to goodness and success).</p>
   </div>
 
@@ -178,7 +300,7 @@ b) See the footnote of (V.2:191).
         90:12
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَمَآ أَدۡرَىٰكَ مَا ٱلۡعَقَبَةُ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَمَآ أَدۡرَىٰكَ مَا ٱلۡعَقَبَةُ</p>
     <p class="text-slate-700 text-base leading-relaxed">And what will make you know the path that is steep?</p>
   </div>
 
@@ -192,7 +314,7 @@ b) See the footnote of (V.2:191).
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">فَكُّ رَقَبَةٍ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">فَكُّ رَقَبَةٍ</p>
     <p class="text-slate-700 text-base leading-relaxed">(It is) freeing a neck (slave)<button onclick="document.getElementById('fn-90-13').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[2]</button></p>
   </div>
 
@@ -214,7 +336,7 @@ b) See the footnote of (V.2:191).
         90:14
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَوۡ إِطۡعَٰمٞ فِي يَوۡمٖ ذِي مَسۡغَبَةٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَوۡ إِطۡعَٰمٞ فِي يَوۡمٖ ذِي مَسۡغَبَةٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">Or giving food in a day of hunger (famine),</p>
   </div>
 
@@ -224,7 +346,7 @@ b) See the footnote of (V.2:191).
         90:15
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">يَتِيمٗا ذَا مَقۡرَبَةٍ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">يَتِيمٗا ذَا مَقۡرَبَةٍ</p>
     <p class="text-slate-700 text-base leading-relaxed">To an orphan near of kin.</p>
   </div>
 
@@ -234,7 +356,7 @@ b) See the footnote of (V.2:191).
         90:16
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَوۡ مِسۡكِينٗا ذَا مَتۡرَبَةٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَوۡ مِسۡكِينٗا ذَا مَتۡرَبَةٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">Or to a Miskîn (poor) cleaving to dust (out of misery).</p>
   </div>
 
@@ -244,7 +366,7 @@ b) See the footnote of (V.2:191).
         90:17
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">ثُمَّ كَانَ مِنَ ٱلَّذِينَ ءَامَنُواْ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ وَتَوَاصَوۡاْ بِٱلۡمَرۡحَمَةِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">ثُمَّ كَانَ مِنَ ٱلَّذِينَ ءَامَنُواْ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ وَتَوَاصَوۡاْ بِٱلۡمَرۡحَمَةِ</p>
     <p class="text-slate-700 text-base leading-relaxed">Then he became one of those who believed (in the Islamic Monotheism) and recommended one another to perseverance and patience, and (also) recommended one another to pity and compassion.</p>
   </div>
 
@@ -254,7 +376,7 @@ b) See the footnote of (V.2:191).
         90:18
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أُوْلَٰٓئِكَ أَصۡحَٰبُ ٱلۡمَيۡمَنَةِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أُوْلَٰٓئِكَ أَصۡحَٰبُ ٱلۡمَيۡمَنَةِ</p>
     <p class="text-slate-700 text-base leading-relaxed">They are those on the Right Hand (i.e. the dwellers of Paradise),</p>
   </div>
 
@@ -264,7 +386,7 @@ b) See the footnote of (V.2:191).
         90:19
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ كَفَرُواْ بِـَٔايَٰتِنَا هُمۡ أَصۡحَٰبُ ٱلۡمَشۡـَٔمَةِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ كَفَرُواْ بِـَٔايَٰتِنَا هُمۡ أَصۡحَٰبُ ٱلۡمَشۡـَٔمَةِ</p>
     <p class="text-slate-700 text-base leading-relaxed">But those who disbelieved in Our Ayât (proofs, evidence, verses, lessons, signs, revelations, etc.), they are those on the Left Hand (the dwellers of Hell).</p>
   </div>
 
@@ -278,7 +400,7 @@ b) See the footnote of (V.2:191).
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">عَلَيۡهِمۡ نَارٞ مُّؤۡصَدَةُۢ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">عَلَيۡهِمۡ نَارٞ مُّؤۡصَدَةُۢ</p>
     <p class="text-slate-700 text-base leading-relaxed">The Fire will be shut over them (i.e. they will be enveloped by the Fire without any opening or window or outlet.<button onclick="document.getElementById('fn-90-20').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[3]</button></p>
   </div>
 

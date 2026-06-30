@@ -17,73 +17,195 @@ permalink: /53/page2
   <p class="text-xs text-slate-400 mt-1">Page 2 of 3</p>
 </div>
 
-<div class="mb-8 max-w-xs mx-auto">
-  <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>
-  <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
-    <option value="">Select verse...</option>
-    <option value="/alquran/53/1">Verse 1</option>
-    <option value="/alquran/53/2">Verse 2</option>
-    <option value="/alquran/53/3">Verse 3</option>
-    <option value="/alquran/53/4">Verse 4</option>
-    <option value="/alquran/53/5">Verse 5</option>
-    <option value="/alquran/53/6">Verse 6</option>
-    <option value="/alquran/53/7">Verse 7</option>
-    <option value="/alquran/53/8">Verse 8</option>
-    <option value="/alquran/53/9">Verse 9</option>
-    <option value="/alquran/53/10">Verse 10</option>
-    <option value="/alquran/53/11">Verse 11</option>
-    <option value="/alquran/53/12">Verse 12</option>
-    <option value="/alquran/53/13">Verse 13</option>
-    <option value="/alquran/53/14">Verse 14</option>
-    <option value="/alquran/53/15">Verse 15</option>
-    <option value="/alquran/53/16">Verse 16</option>
-    <option value="/alquran/53/17">Verse 17</option>
-    <option value="/alquran/53/18">Verse 18</option>
-    <option value="/alquran/53/19">Verse 19</option>
-    <option value="/alquran/53/20">Verse 20</option>
-    <option value="/alquran/53/21">Verse 21</option>
-    <option value="/alquran/53/22">Verse 22</option>
-    <option value="/alquran/53/23">Verse 23</option>
-    <option value="/alquran/53/24">Verse 24</option>
-    <option value="/alquran/53/25">Verse 25</option>
-    <option value="/alquran/53/26">Verse 26</option>
-    <option value="/alquran/53/27">Verse 27</option>
-    <option value="/alquran/53/28">Verse 28</option>
-    <option value="/alquran/53/29">Verse 29</option>
-    <option value="/alquran/53/30">Verse 30</option>
-    <option value="/alquran/53/31">Verse 31</option>
-    <option value="/alquran/53/32">Verse 32</option>
-    <option value="/alquran/53/33">Verse 33</option>
-    <option value="/alquran/53/34">Verse 34</option>
-    <option value="/alquran/53/35">Verse 35</option>
-    <option value="/alquran/53/36">Verse 36</option>
-    <option value="/alquran/53/37">Verse 37</option>
-    <option value="/alquran/53/38">Verse 38</option>
-    <option value="/alquran/53/39">Verse 39</option>
-    <option value="/alquran/53/40">Verse 40</option>
-    <option value="/alquran/53/41">Verse 41</option>
-    <option value="/alquran/53/42">Verse 42</option>
-    <option value="/alquran/53/43">Verse 43</option>
-    <option value="/alquran/53/44">Verse 44</option>
-    <option value="/alquran/53/45">Verse 45</option>
-    <option value="/alquran/53/46">Verse 46</option>
-    <option value="/alquran/53/47">Verse 47</option>
-    <option value="/alquran/53/48">Verse 48</option>
-    <option value="/alquran/53/49">Verse 49</option>
-    <option value="/alquran/53/50">Verse 50</option>
-    <option value="/alquran/53/51">Verse 51</option>
-    <option value="/alquran/53/52">Verse 52</option>
-    <option value="/alquran/53/53">Verse 53</option>
-    <option value="/alquran/53/54">Verse 54</option>
-    <option value="/alquran/53/55">Verse 55</option>
-    <option value="/alquran/53/56">Verse 56</option>
-    <option value="/alquran/53/57">Verse 57</option>
-    <option value="/alquran/53/58">Verse 58</option>
-    <option value="/alquran/53/59">Verse 59</option>
-    <option value="/alquran/53/60">Verse 60</option>
-    <option value="/alquran/53/61">Verse 61</option>
-    <option value="/alquran/53/62">Verse 62</option>
-  </select>
+<div class="mb-8 flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+  <div class="flex-1">
+    <label for="chapter-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Surah</label>
+    <select id="chapter-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">
+      <option value="/alquran/1/" >Surah 1: Al-Fatihah</option>
+      <option value="/alquran/2/" >Surah 2: Al-Baqarah</option>
+      <option value="/alquran/3/" >Surah 3: Aal 'Imran</option>
+      <option value="/alquran/4/" >Surah 4: An-Nisa'</option>
+      <option value="/alquran/5/" >Surah 5: Al-Ma'idah</option>
+      <option value="/alquran/6/" >Surah 6: Al-An'am</option>
+      <option value="/alquran/7/" >Surah 7: Al-A'raf</option>
+      <option value="/alquran/8/" >Surah 8: Al-Anfal</option>
+      <option value="/alquran/9/" >Surah 9: At-Tawbah</option>
+      <option value="/alquran/10/" >Surah 10: Yunus</option>
+      <option value="/alquran/11/" >Surah 11: Hud</option>
+      <option value="/alquran/12/" >Surah 12: Yusuf</option>
+      <option value="/alquran/13/" >Surah 13: Ar-Ra'd</option>
+      <option value="/alquran/14/" >Surah 14: Ibrahim</option>
+      <option value="/alquran/15/" >Surah 15: Al-Hijr</option>
+      <option value="/alquran/16/" >Surah 16: An-Nahl</option>
+      <option value="/alquran/17/" >Surah 17: Al-Isra'</option>
+      <option value="/alquran/18/" >Surah 18: Al-Kahf</option>
+      <option value="/alquran/19/" >Surah 19: Maryam</option>
+      <option value="/alquran/20/" >Surah 20: Ta-Ha</option>
+      <option value="/alquran/21/" >Surah 21: Al-Anbiya'</option>
+      <option value="/alquran/22/" >Surah 22: Al-Hajj</option>
+      <option value="/alquran/23/" >Surah 23: Al-Mu'minun</option>
+      <option value="/alquran/24/" >Surah 24: An-Nur</option>
+      <option value="/alquran/25/" >Surah 25: Al-Furqan</option>
+      <option value="/alquran/26/" >Surah 26: Ash-Shu'ara'</option>
+      <option value="/alquran/27/" >Surah 27: An-Naml</option>
+      <option value="/alquran/28/" >Surah 28: Al-Qasas</option>
+      <option value="/alquran/29/" >Surah 29: Al-Ankabut</option>
+      <option value="/alquran/30/" >Surah 30: Ar-Rum</option>
+      <option value="/alquran/31/" >Surah 31: Luqman</option>
+      <option value="/alquran/32/" >Surah 32: As-Sajdah</option>
+      <option value="/alquran/33/" >Surah 33: Al-Ahzab</option>
+      <option value="/alquran/34/" >Surah 34: Saba'</option>
+      <option value="/alquran/35/" >Surah 35: Fatir</option>
+      <option value="/alquran/36/" >Surah 36: Ya-Sin</option>
+      <option value="/alquran/37/" >Surah 37: As-Saffat</option>
+      <option value="/alquran/38/" >Surah 38: Sad</option>
+      <option value="/alquran/39/" >Surah 39: Az-Zumar</option>
+      <option value="/alquran/40/" >Surah 40: Ghafir</option>
+      <option value="/alquran/41/" >Surah 41: Fussilat</option>
+      <option value="/alquran/42/" >Surah 42: Ash-Shura</option>
+      <option value="/alquran/43/" >Surah 43: Az-Zukhruf</option>
+      <option value="/alquran/44/" >Surah 44: Ad-Dukhan</option>
+      <option value="/alquran/45/" >Surah 45: Al-Jathiyah</option>
+      <option value="/alquran/46/" >Surah 46: Al-Ahqaf</option>
+      <option value="/alquran/47/" >Surah 47: Muhammad</option>
+      <option value="/alquran/48/" >Surah 48: Al-Fath</option>
+      <option value="/alquran/49/" >Surah 49: Al-Hujurat</option>
+      <option value="/alquran/50/" >Surah 50: Qaf</option>
+      <option value="/alquran/51/" >Surah 51: Adh-Dhariyat</option>
+      <option value="/alquran/52/" >Surah 52: At-Tur</option>
+      <option value="/alquran/53/" selected>Surah 53: An-Najm</option>
+      <option value="/alquran/54/" >Surah 54: Al-Qamar</option>
+      <option value="/alquran/55/" >Surah 55: Ar-Rahman</option>
+      <option value="/alquran/56/" >Surah 56: Al-Waqi'ah</option>
+      <option value="/alquran/57/" >Surah 57: Al-Hadid</option>
+      <option value="/alquran/58/" >Surah 58: Al-Mujadilah</option>
+      <option value="/alquran/59/" >Surah 59: Al-Hashr</option>
+      <option value="/alquran/60/" >Surah 60: Al-Mumtahanah</option>
+      <option value="/alquran/61/" >Surah 61: As-Saff</option>
+      <option value="/alquran/62/" >Surah 62: Al-Jumu'ah</option>
+      <option value="/alquran/63/" >Surah 63: Al-Munafiqun</option>
+      <option value="/alquran/64/" >Surah 64: At-Taghabun</option>
+      <option value="/alquran/65/" >Surah 65: At-Talaq</option>
+      <option value="/alquran/66/" >Surah 66: At-Tahrim</option>
+      <option value="/alquran/67/" >Surah 67: Al-Mulk</option>
+      <option value="/alquran/68/" >Surah 68: Al-Qalam</option>
+      <option value="/alquran/69/" >Surah 69: Al-Haqqah</option>
+      <option value="/alquran/70/" >Surah 70: Al-Ma'arij</option>
+      <option value="/alquran/71/" >Surah 71: Nuh</option>
+      <option value="/alquran/72/" >Surah 72: Al-Jinn</option>
+      <option value="/alquran/73/" >Surah 73: Al-Muzzammil</option>
+      <option value="/alquran/74/" >Surah 74: Al-Muddaththir</option>
+      <option value="/alquran/75/" >Surah 75: Al-Qiyamah</option>
+      <option value="/alquran/76/" >Surah 76: Al-Insan</option>
+      <option value="/alquran/77/" >Surah 77: Al-Mursalat</option>
+      <option value="/alquran/78/" >Surah 78: An-Naba'</option>
+      <option value="/alquran/79/" >Surah 79: An-Nazi'at</option>
+      <option value="/alquran/80/" >Surah 80: 'Abasa</option>
+      <option value="/alquran/81/" >Surah 81: At-Takwir</option>
+      <option value="/alquran/82/" >Surah 82: Al-Infitar</option>
+      <option value="/alquran/83/" >Surah 83: Al-Mutaffifin</option>
+      <option value="/alquran/84/" >Surah 84: Al-Inshiqaq</option>
+      <option value="/alquran/85/" >Surah 85: Al-Buruj</option>
+      <option value="/alquran/86/" >Surah 86: At-Tariq</option>
+      <option value="/alquran/87/" >Surah 87: Al-A'la</option>
+      <option value="/alquran/88/" >Surah 88: Al-Ghashiyah</option>
+      <option value="/alquran/89/" >Surah 89: Al-Fajr</option>
+      <option value="/alquran/90/" >Surah 90: Al-Balad</option>
+      <option value="/alquran/91/" >Surah 91: Ash-Shams</option>
+      <option value="/alquran/92/" >Surah 92: Al-Layl</option>
+      <option value="/alquran/93/" >Surah 93: Ad-Duha</option>
+      <option value="/alquran/94/" >Surah 94: Ash-Sharh</option>
+      <option value="/alquran/95/" >Surah 95: At-Tin</option>
+      <option value="/alquran/96/" >Surah 96: Al-'Alaq</option>
+      <option value="/alquran/97/" >Surah 97: Al-Qadr</option>
+      <option value="/alquran/98/" >Surah 98: Al-Bayyinah</option>
+      <option value="/alquran/99/" >Surah 99: Az-Zalzalah</option>
+      <option value="/alquran/100/" >Surah 100: Al-'Adiyat</option>
+      <option value="/alquran/101/" >Surah 101: Al-Qari'ah</option>
+      <option value="/alquran/102/" >Surah 102: At-Takathur</option>
+      <option value="/alquran/103/" >Surah 103: Al-'Asr</option>
+      <option value="/alquran/104/" >Surah 104: Al-Humazah</option>
+      <option value="/alquran/105/" >Surah 105: Al-Fil</option>
+      <option value="/alquran/106/" >Surah 106: Quraysh</option>
+      <option value="/alquran/107/" >Surah 107: Al-Ma'un</option>
+      <option value="/alquran/108/" >Surah 108: Al-Kauthar</option>
+      <option value="/alquran/109/" >Surah 109: Al-Kafirun</option>
+      <option value="/alquran/110/" >Surah 110: An-Nasr</option>
+      <option value="/alquran/111/" >Surah 111: Al-Masad</option>
+      <option value="/alquran/112/" >Surah 112: Al-Ikhlas</option>
+      <option value="/alquran/113/" >Surah 113: Al-Falaq</option>
+      <option value="/alquran/114/" >Surah 114: An-Nas</option>
+    </select>
+  </div>
+
+  <div class="flex-1">
+    <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>
+    <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">
+      <option value="">Select verse...</option>
+      <option value="/alquran/53/1">Verse 1</option>
+      <option value="/alquran/53/2">Verse 2</option>
+      <option value="/alquran/53/3">Verse 3</option>
+      <option value="/alquran/53/4">Verse 4</option>
+      <option value="/alquran/53/5">Verse 5</option>
+      <option value="/alquran/53/6">Verse 6</option>
+      <option value="/alquran/53/7">Verse 7</option>
+      <option value="/alquran/53/8">Verse 8</option>
+      <option value="/alquran/53/9">Verse 9</option>
+      <option value="/alquran/53/10">Verse 10</option>
+      <option value="/alquran/53/11">Verse 11</option>
+      <option value="/alquran/53/12">Verse 12</option>
+      <option value="/alquran/53/13">Verse 13</option>
+      <option value="/alquran/53/14">Verse 14</option>
+      <option value="/alquran/53/15">Verse 15</option>
+      <option value="/alquran/53/16">Verse 16</option>
+      <option value="/alquran/53/17">Verse 17</option>
+      <option value="/alquran/53/18">Verse 18</option>
+      <option value="/alquran/53/19">Verse 19</option>
+      <option value="/alquran/53/20">Verse 20</option>
+      <option value="/alquran/53/21">Verse 21</option>
+      <option value="/alquran/53/22">Verse 22</option>
+      <option value="/alquran/53/23">Verse 23</option>
+      <option value="/alquran/53/24">Verse 24</option>
+      <option value="/alquran/53/25">Verse 25</option>
+      <option value="/alquran/53/26">Verse 26</option>
+      <option value="/alquran/53/27">Verse 27</option>
+      <option value="/alquran/53/28">Verse 28</option>
+      <option value="/alquran/53/29">Verse 29</option>
+      <option value="/alquran/53/30">Verse 30</option>
+      <option value="/alquran/53/31">Verse 31</option>
+      <option value="/alquran/53/32">Verse 32</option>
+      <option value="/alquran/53/33">Verse 33</option>
+      <option value="/alquran/53/34">Verse 34</option>
+      <option value="/alquran/53/35">Verse 35</option>
+      <option value="/alquran/53/36">Verse 36</option>
+      <option value="/alquran/53/37">Verse 37</option>
+      <option value="/alquran/53/38">Verse 38</option>
+      <option value="/alquran/53/39">Verse 39</option>
+      <option value="/alquran/53/40">Verse 40</option>
+      <option value="/alquran/53/41">Verse 41</option>
+      <option value="/alquran/53/42">Verse 42</option>
+      <option value="/alquran/53/43">Verse 43</option>
+      <option value="/alquran/53/44">Verse 44</option>
+      <option value="/alquran/53/45">Verse 45</option>
+      <option value="/alquran/53/46">Verse 46</option>
+      <option value="/alquran/53/47">Verse 47</option>
+      <option value="/alquran/53/48">Verse 48</option>
+      <option value="/alquran/53/49">Verse 49</option>
+      <option value="/alquran/53/50">Verse 50</option>
+      <option value="/alquran/53/51">Verse 51</option>
+      <option value="/alquran/53/52">Verse 52</option>
+      <option value="/alquran/53/53">Verse 53</option>
+      <option value="/alquran/53/54">Verse 54</option>
+      <option value="/alquran/53/55">Verse 55</option>
+      <option value="/alquran/53/56">Verse 56</option>
+      <option value="/alquran/53/57">Verse 57</option>
+      <option value="/alquran/53/58">Verse 58</option>
+      <option value="/alquran/53/59">Verse 59</option>
+      <option value="/alquran/53/60">Verse 60</option>
+      <option value="/alquran/53/61">Verse 61</option>
+      <option value="/alquran/53/62">Verse 62</option>
+    </select>
+  </div>
 </div>
 
 <div class="space-y-6">
@@ -93,7 +215,7 @@ permalink: /53/page2
         53:31
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَلِلَّهِ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِ لِيَجۡزِيَ ٱلَّذِينَ أَسَٰٓـُٔواْ بِمَا عَمِلُواْ وَيَجۡزِيَ ٱلَّذِينَ أَحۡسَنُواْ بِٱلۡحُسۡنَى</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَلِلَّهِ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِ لِيَجۡزِيَ ٱلَّذِينَ أَسَٰٓـُٔواْ بِمَا عَمِلُواْ وَيَجۡزِيَ ٱلَّذِينَ أَحۡسَنُواْ بِٱلۡحُسۡنَى</p>
     <p class="text-slate-700 text-base leading-relaxed">And to Allâh belongs all that is in the heavens and all that is in the earth, that He may requite those who do evil with that which they have done (i.e. punish them in Hell), and reward those who do good, with what is best (i.e. Paradise).</p>
   </div>
 
@@ -103,7 +225,7 @@ permalink: /53/page2
         53:32
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">ٱلَّذِينَ يَجۡتَنِبُونَ كَبَٰٓئِرَ ٱلۡإِثۡمِ وَٱلۡفَوَٰحِشَ إِلَّا ٱللَّمَمَۚ إِنَّ رَبَّكَ وَٰسِعُ ٱلۡمَغۡفِرَةِۚ هُوَ أَعۡلَمُ بِكُمۡ إِذۡ أَنشَأَكُم مِّنَ ٱلۡأَرۡضِ وَإِذۡ أَنتُمۡ أَجِنَّةٞ فِي بُطُونِ أُمَّهَٰتِكُمۡۖ فَلَا تُزَكُّوٓاْ أَنفُسَكُمۡۖ هُوَ أَعۡلَمُ بِمَنِ ٱتَّقَىٰٓ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">ٱلَّذِينَ يَجۡتَنِبُونَ كَبَٰٓئِرَ ٱلۡإِثۡمِ وَٱلۡفَوَٰحِشَ إِلَّا ٱللَّمَمَۚ إِنَّ رَبَّكَ وَٰسِعُ ٱلۡمَغۡفِرَةِۚ هُوَ أَعۡلَمُ بِكُمۡ إِذۡ أَنشَأَكُم مِّنَ ٱلۡأَرۡضِ وَإِذۡ أَنتُمۡ أَجِنَّةٞ فِي بُطُونِ أُمَّهَٰتِكُمۡۖ فَلَا تُزَكُّوٓاْ أَنفُسَكُمۡۖ هُوَ أَعۡلَمُ بِمَنِ ٱتَّقَىٰٓ</p>
     <p class="text-slate-700 text-base leading-relaxed">Those who avoid great sins (See the Qur’ân, Verses: 6:152,153) and Al-Fawâhish (illegal sexual intercourse) except the small faults, - verily, your Lord is of Vast Forgiveness. He knows you well when He created you from the earth (Adam), and when you were fetuses in your mothers’ wombs. So ascribe not purity to yourselves. He knows best him who fears Allâh and keeps his duty to Him [i.e. those who are Al-Muttaqûn (the pious. See V.2:2)].</p>
   </div>
 
@@ -113,7 +235,7 @@ permalink: /53/page2
         53:33
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَفَرَءَيۡتَ ٱلَّذِي تَوَلَّىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَفَرَءَيۡتَ ٱلَّذِي تَوَلَّىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">Did you (O Muhammad صلى الله عليه وسلم) observe him who turned away (from Islâm).</p>
   </div>
 
@@ -123,7 +245,7 @@ permalink: /53/page2
         53:34
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَعۡطَىٰ قَلِيلٗا وَأَكۡدَىٰٓ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَعۡطَىٰ قَلِيلٗا وَأَكۡدَىٰٓ</p>
     <p class="text-slate-700 text-base leading-relaxed">And gave a little, then stopped (giving)?</p>
   </div>
 
@@ -133,7 +255,7 @@ permalink: /53/page2
         53:35
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَعِندَهُۥ عِلۡمُ ٱلۡغَيۡبِ فَهُوَ يَرَىٰٓ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَعِندَهُۥ عِلۡمُ ٱلۡغَيۡبِ فَهُوَ يَرَىٰٓ</p>
     <p class="text-slate-700 text-base leading-relaxed">Is with him the knowledge of the Unseen so that he sees?</p>
   </div>
 
@@ -143,7 +265,7 @@ permalink: /53/page2
         53:36
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَمۡ لَمۡ يُنَبَّأۡ بِمَا فِي صُحُفِ مُوسَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَمۡ لَمۡ يُنَبَّأۡ بِمَا فِي صُحُفِ مُوسَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">Or is he not informed with what is in the Pages (Scripture) of Mûsâ (Moses),</p>
   </div>
 
@@ -153,7 +275,7 @@ permalink: /53/page2
         53:37
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَإِبۡرَٰهِيمَ ٱلَّذِي وَفَّىٰٓ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَإِبۡرَٰهِيمَ ٱلَّذِي وَفَّىٰٓ</p>
     <p class="text-slate-700 text-base leading-relaxed">And of Ibrâhîm (Abraham) who fulfilled (or conveyed) all that (Allâh ordered him to do or convey):</p>
   </div>
 
@@ -163,7 +285,7 @@ permalink: /53/page2
         53:38
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَلَّا تَزِرُ وَازِرَةٞ وِزۡرَ أُخۡرَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَلَّا تَزِرُ وَازِرَةٞ وِزۡرَ أُخۡرَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">That no burdened person (with sins) shall bear the burden (sins) of another.</p>
   </div>
 
@@ -177,7 +299,7 @@ permalink: /53/page2
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَن لَّيۡسَ لِلۡإِنسَٰنِ إِلَّا مَا سَعَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَن لَّيۡسَ لِلۡإِنسَٰنِ إِلَّا مَا سَعَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that man can have nothing but what he does (good or bad).<button onclick="document.getElementById('fn-53-39').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[4]</button></p>
   </div>
 
@@ -203,7 +325,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:40
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّ سَعۡيَهُۥ سَوۡفَ يُرَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّ سَعۡيَهُۥ سَوۡفَ يُرَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that his deeds will be seen.</p>
   </div>
 
@@ -217,7 +339,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">ثُمَّ يُجۡزَىٰهُ ٱلۡجَزَآءَ ٱلۡأَوۡفَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">ثُمَّ يُجۡزَىٰهُ ٱلۡجَزَآءَ ٱلۡأَوۡفَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">Then he will be recompensed with a full and the best recompense.<button onclick="document.getElementById('fn-53-41').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[5]</button></p>
   </div>
 
@@ -239,7 +361,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:42
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّ إِلَىٰ رَبِّكَ ٱلۡمُنتَهَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّ إِلَىٰ رَبِّكَ ٱلۡمُنتَهَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that to your Lord (Allâh) is the End (Return of everything).</p>
   </div>
 
@@ -249,7 +371,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:43
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ أَضۡحَكَ وَأَبۡكَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ أَضۡحَكَ وَأَبۡكَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that it is He (Allâh) Who makes (whom He wills) laugh, and makes (whom He wills) weep.</p>
   </div>
 
@@ -259,7 +381,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:44
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ أَمَاتَ وَأَحۡيَا</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ أَمَاتَ وَأَحۡيَا</p>
     <p class="text-slate-700 text-base leading-relaxed">And that it is He (Allâh) Who causes death and gives life.</p>
   </div>
 
@@ -269,7 +391,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:45
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ خَلَقَ ٱلزَّوۡجَيۡنِ ٱلذَّكَرَ وَٱلۡأُنثَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ خَلَقَ ٱلزَّوۡجَيۡنِ ٱلذَّكَرَ وَٱلۡأُنثَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that He (Allâh) creates the pairs, male and female,</p>
   </div>
 
@@ -279,7 +401,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:46
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">مِن نُّطۡفَةٍ إِذَا تُمۡنَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">مِن نُّطۡفَةٍ إِذَا تُمۡنَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">From Nutfah (drops of semen - male and female discharges) when it is emitted.</p>
   </div>
 
@@ -289,7 +411,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:47
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّ عَلَيۡهِ ٱلنَّشۡأَةَ ٱلۡأُخۡرَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّ عَلَيۡهِ ٱلنَّشۡأَةَ ٱلۡأُخۡرَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that upon Him (Allâh) is another bringing forth (Resurrection).</p>
   </div>
 
@@ -299,7 +421,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:48
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ أَغۡنَىٰ وَأَقۡنَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ أَغۡنَىٰ وَأَقۡنَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that it is He (Allâh) Who gives much or a little (of wealth and contentment)</p>
   </div>
 
@@ -309,7 +431,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:49
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ رَبُّ ٱلشِّعۡرَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥ هُوَ رَبُّ ٱلشِّعۡرَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that He (Allâh) is the Lord of Sirius (the star which the pagan Arabs used to worship).</p>
   </div>
 
@@ -319,7 +441,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:50
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥٓ أَهۡلَكَ عَادًا ٱلۡأُولَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَأَنَّهُۥٓ أَهۡلَكَ عَادًا ٱلۡأُولَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And that it is He (Allâh) Who destroyed the former ‘Âd (people),</p>
   </div>
 
@@ -329,7 +451,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:51
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَثَمُودَاْ فَمَآ أَبۡقَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَثَمُودَاْ فَمَآ أَبۡقَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And Thamûd (people): He spared none of them.</p>
   </div>
 
@@ -339,7 +461,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:52
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَقَوۡمَ نُوحٖ مِّن قَبۡلُۖ إِنَّهُمۡ كَانُواْ هُمۡ أَظۡلَمَ وَأَطۡغَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَقَوۡمَ نُوحٖ مِّن قَبۡلُۖ إِنَّهُمۡ كَانُواْ هُمۡ أَظۡلَمَ وَأَطۡغَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And the people of Nûh (Noah) aforetime. Verily, they were more unjust and more rebellious and transgressing [in disobeying Allâh and His Messenger Nûh (Noah) عليه السلام].</p>
   </div>
 
@@ -349,7 +471,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:53
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَٱلۡمُؤۡتَفِكَةَ أَهۡوَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَٱلۡمُؤۡتَفِكَةَ أَهۡوَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">And He destroyed the overthrown cities [of Sodom to which Prophet Lût (Lot) was sent].</p>
   </div>
 
@@ -359,7 +481,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:54
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">فَغَشَّىٰهَا مَا غَشَّىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">فَغَشَّىٰهَا مَا غَشَّىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">So there covered them that which did cover (i.e. torment with stones).</p>
   </div>
 
@@ -369,7 +491,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:55
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">فَبِأَيِّ ءَالَآءِ رَبِّكَ تَتَمَارَىٰ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">فَبِأَيِّ ءَالَآءِ رَبِّكَ تَتَمَارَىٰ</p>
     <p class="text-slate-700 text-base leading-relaxed">Then which of the Graces of your Lord (O man!) will you doubt?</p>
   </div>
 
@@ -383,7 +505,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">هَٰذَا نَذِيرٞ مِّنَ ٱلنُّذُرِ ٱلۡأُولَىٰٓ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">هَٰذَا نَذِيرٞ مِّنَ ٱلنُّذُرِ ٱلۡأُولَىٰٓ</p>
     <p class="text-slate-700 text-base leading-relaxed">This (Muhammad صلى الله عليه وسلم) is a warner (Messenger) of the (series of) warners (Messengers) of old.<button onclick="document.getElementById('fn-53-56').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[6]</button></p>
   </div>
 
@@ -405,7 +527,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:57
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَزِفَتِ ٱلۡأٓزِفَةُ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَزِفَتِ ٱلۡأٓزِفَةُ</p>
     <p class="text-slate-700 text-base leading-relaxed">The Day of Resurrection draws near.</p>
   </div>
 
@@ -415,7 +537,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:58
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">لَيۡسَ لَهَا مِن دُونِ ٱللَّهِ كَاشِفَةٌ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">لَيۡسَ لَهَا مِن دُونِ ٱللَّهِ كَاشِفَةٌ</p>
     <p class="text-slate-700 text-base leading-relaxed">None besides Allâh can avert it (or advance it or delay it).</p>
   </div>
 
@@ -425,7 +547,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:59
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَفَمِنۡ هَٰذَا ٱلۡحَدِيثِ تَعۡجَبُونَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَفَمِنۡ هَٰذَا ٱلۡحَدِيثِ تَعۡجَبُونَ</p>
     <p class="text-slate-700 text-base leading-relaxed">Do you then wonder at this recitation (the Qur’ân)?</p>
   </div>
 
@@ -435,7 +557,7 @@ c) A righteous, pious son (or daughter) who begs Allâh to forgive his (or her) 
         53:60
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَتَضۡحَكُونَ وَلَا تَبۡكُونَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَتَضۡحَكُونَ وَلَا تَبۡكُونَ</p>
     <p class="text-slate-700 text-base leading-relaxed">And you laugh at it and weep not,</p>
   </div>
 

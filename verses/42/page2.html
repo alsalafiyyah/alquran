@@ -17,64 +17,186 @@ permalink: /42/page2
   <p class="text-xs text-slate-400 mt-1">Page 2 of 2</p>
 </div>
 
-<div class="mb-8 max-w-xs mx-auto">
-  <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>
-  <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
-    <option value="">Select verse...</option>
-    <option value="/alquran/42/1">Verse 1</option>
-    <option value="/alquran/42/2">Verse 2</option>
-    <option value="/alquran/42/3">Verse 3</option>
-    <option value="/alquran/42/4">Verse 4</option>
-    <option value="/alquran/42/5">Verse 5</option>
-    <option value="/alquran/42/6">Verse 6</option>
-    <option value="/alquran/42/7">Verse 7</option>
-    <option value="/alquran/42/8">Verse 8</option>
-    <option value="/alquran/42/9">Verse 9</option>
-    <option value="/alquran/42/10">Verse 10</option>
-    <option value="/alquran/42/11">Verse 11</option>
-    <option value="/alquran/42/12">Verse 12</option>
-    <option value="/alquran/42/13">Verse 13</option>
-    <option value="/alquran/42/14">Verse 14</option>
-    <option value="/alquran/42/15">Verse 15</option>
-    <option value="/alquran/42/16">Verse 16</option>
-    <option value="/alquran/42/17">Verse 17</option>
-    <option value="/alquran/42/18">Verse 18</option>
-    <option value="/alquran/42/19">Verse 19</option>
-    <option value="/alquran/42/20">Verse 20</option>
-    <option value="/alquran/42/21">Verse 21</option>
-    <option value="/alquran/42/22">Verse 22</option>
-    <option value="/alquran/42/23">Verse 23</option>
-    <option value="/alquran/42/24">Verse 24</option>
-    <option value="/alquran/42/25">Verse 25</option>
-    <option value="/alquran/42/26">Verse 26</option>
-    <option value="/alquran/42/27">Verse 27</option>
-    <option value="/alquran/42/28">Verse 28</option>
-    <option value="/alquran/42/29">Verse 29</option>
-    <option value="/alquran/42/30">Verse 30</option>
-    <option value="/alquran/42/31">Verse 31</option>
-    <option value="/alquran/42/32">Verse 32</option>
-    <option value="/alquran/42/33">Verse 33</option>
-    <option value="/alquran/42/34">Verse 34</option>
-    <option value="/alquran/42/35">Verse 35</option>
-    <option value="/alquran/42/36">Verse 36</option>
-    <option value="/alquran/42/37">Verse 37</option>
-    <option value="/alquran/42/38">Verse 38</option>
-    <option value="/alquran/42/39">Verse 39</option>
-    <option value="/alquran/42/40">Verse 40</option>
-    <option value="/alquran/42/41">Verse 41</option>
-    <option value="/alquran/42/42">Verse 42</option>
-    <option value="/alquran/42/43">Verse 43</option>
-    <option value="/alquran/42/44">Verse 44</option>
-    <option value="/alquran/42/45">Verse 45</option>
-    <option value="/alquran/42/46">Verse 46</option>
-    <option value="/alquran/42/47">Verse 47</option>
-    <option value="/alquran/42/48">Verse 48</option>
-    <option value="/alquran/42/49">Verse 49</option>
-    <option value="/alquran/42/50">Verse 50</option>
-    <option value="/alquran/42/51">Verse 51</option>
-    <option value="/alquran/42/52">Verse 52</option>
-    <option value="/alquran/42/53">Verse 53</option>
-  </select>
+<div class="mb-8 flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+  <div class="flex-1">
+    <label for="chapter-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Surah</label>
+    <select id="chapter-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">
+      <option value="/alquran/1/" >Surah 1: Al-Fatihah</option>
+      <option value="/alquran/2/" >Surah 2: Al-Baqarah</option>
+      <option value="/alquran/3/" >Surah 3: Aal 'Imran</option>
+      <option value="/alquran/4/" >Surah 4: An-Nisa'</option>
+      <option value="/alquran/5/" >Surah 5: Al-Ma'idah</option>
+      <option value="/alquran/6/" >Surah 6: Al-An'am</option>
+      <option value="/alquran/7/" >Surah 7: Al-A'raf</option>
+      <option value="/alquran/8/" >Surah 8: Al-Anfal</option>
+      <option value="/alquran/9/" >Surah 9: At-Tawbah</option>
+      <option value="/alquran/10/" >Surah 10: Yunus</option>
+      <option value="/alquran/11/" >Surah 11: Hud</option>
+      <option value="/alquran/12/" >Surah 12: Yusuf</option>
+      <option value="/alquran/13/" >Surah 13: Ar-Ra'd</option>
+      <option value="/alquran/14/" >Surah 14: Ibrahim</option>
+      <option value="/alquran/15/" >Surah 15: Al-Hijr</option>
+      <option value="/alquran/16/" >Surah 16: An-Nahl</option>
+      <option value="/alquran/17/" >Surah 17: Al-Isra'</option>
+      <option value="/alquran/18/" >Surah 18: Al-Kahf</option>
+      <option value="/alquran/19/" >Surah 19: Maryam</option>
+      <option value="/alquran/20/" >Surah 20: Ta-Ha</option>
+      <option value="/alquran/21/" >Surah 21: Al-Anbiya'</option>
+      <option value="/alquran/22/" >Surah 22: Al-Hajj</option>
+      <option value="/alquran/23/" >Surah 23: Al-Mu'minun</option>
+      <option value="/alquran/24/" >Surah 24: An-Nur</option>
+      <option value="/alquran/25/" >Surah 25: Al-Furqan</option>
+      <option value="/alquran/26/" >Surah 26: Ash-Shu'ara'</option>
+      <option value="/alquran/27/" >Surah 27: An-Naml</option>
+      <option value="/alquran/28/" >Surah 28: Al-Qasas</option>
+      <option value="/alquran/29/" >Surah 29: Al-Ankabut</option>
+      <option value="/alquran/30/" >Surah 30: Ar-Rum</option>
+      <option value="/alquran/31/" >Surah 31: Luqman</option>
+      <option value="/alquran/32/" >Surah 32: As-Sajdah</option>
+      <option value="/alquran/33/" >Surah 33: Al-Ahzab</option>
+      <option value="/alquran/34/" >Surah 34: Saba'</option>
+      <option value="/alquran/35/" >Surah 35: Fatir</option>
+      <option value="/alquran/36/" >Surah 36: Ya-Sin</option>
+      <option value="/alquran/37/" >Surah 37: As-Saffat</option>
+      <option value="/alquran/38/" >Surah 38: Sad</option>
+      <option value="/alquran/39/" >Surah 39: Az-Zumar</option>
+      <option value="/alquran/40/" >Surah 40: Ghafir</option>
+      <option value="/alquran/41/" >Surah 41: Fussilat</option>
+      <option value="/alquran/42/" selected>Surah 42: Ash-Shura</option>
+      <option value="/alquran/43/" >Surah 43: Az-Zukhruf</option>
+      <option value="/alquran/44/" >Surah 44: Ad-Dukhan</option>
+      <option value="/alquran/45/" >Surah 45: Al-Jathiyah</option>
+      <option value="/alquran/46/" >Surah 46: Al-Ahqaf</option>
+      <option value="/alquran/47/" >Surah 47: Muhammad</option>
+      <option value="/alquran/48/" >Surah 48: Al-Fath</option>
+      <option value="/alquran/49/" >Surah 49: Al-Hujurat</option>
+      <option value="/alquran/50/" >Surah 50: Qaf</option>
+      <option value="/alquran/51/" >Surah 51: Adh-Dhariyat</option>
+      <option value="/alquran/52/" >Surah 52: At-Tur</option>
+      <option value="/alquran/53/" >Surah 53: An-Najm</option>
+      <option value="/alquran/54/" >Surah 54: Al-Qamar</option>
+      <option value="/alquran/55/" >Surah 55: Ar-Rahman</option>
+      <option value="/alquran/56/" >Surah 56: Al-Waqi'ah</option>
+      <option value="/alquran/57/" >Surah 57: Al-Hadid</option>
+      <option value="/alquran/58/" >Surah 58: Al-Mujadilah</option>
+      <option value="/alquran/59/" >Surah 59: Al-Hashr</option>
+      <option value="/alquran/60/" >Surah 60: Al-Mumtahanah</option>
+      <option value="/alquran/61/" >Surah 61: As-Saff</option>
+      <option value="/alquran/62/" >Surah 62: Al-Jumu'ah</option>
+      <option value="/alquran/63/" >Surah 63: Al-Munafiqun</option>
+      <option value="/alquran/64/" >Surah 64: At-Taghabun</option>
+      <option value="/alquran/65/" >Surah 65: At-Talaq</option>
+      <option value="/alquran/66/" >Surah 66: At-Tahrim</option>
+      <option value="/alquran/67/" >Surah 67: Al-Mulk</option>
+      <option value="/alquran/68/" >Surah 68: Al-Qalam</option>
+      <option value="/alquran/69/" >Surah 69: Al-Haqqah</option>
+      <option value="/alquran/70/" >Surah 70: Al-Ma'arij</option>
+      <option value="/alquran/71/" >Surah 71: Nuh</option>
+      <option value="/alquran/72/" >Surah 72: Al-Jinn</option>
+      <option value="/alquran/73/" >Surah 73: Al-Muzzammil</option>
+      <option value="/alquran/74/" >Surah 74: Al-Muddaththir</option>
+      <option value="/alquran/75/" >Surah 75: Al-Qiyamah</option>
+      <option value="/alquran/76/" >Surah 76: Al-Insan</option>
+      <option value="/alquran/77/" >Surah 77: Al-Mursalat</option>
+      <option value="/alquran/78/" >Surah 78: An-Naba'</option>
+      <option value="/alquran/79/" >Surah 79: An-Nazi'at</option>
+      <option value="/alquran/80/" >Surah 80: 'Abasa</option>
+      <option value="/alquran/81/" >Surah 81: At-Takwir</option>
+      <option value="/alquran/82/" >Surah 82: Al-Infitar</option>
+      <option value="/alquran/83/" >Surah 83: Al-Mutaffifin</option>
+      <option value="/alquran/84/" >Surah 84: Al-Inshiqaq</option>
+      <option value="/alquran/85/" >Surah 85: Al-Buruj</option>
+      <option value="/alquran/86/" >Surah 86: At-Tariq</option>
+      <option value="/alquran/87/" >Surah 87: Al-A'la</option>
+      <option value="/alquran/88/" >Surah 88: Al-Ghashiyah</option>
+      <option value="/alquran/89/" >Surah 89: Al-Fajr</option>
+      <option value="/alquran/90/" >Surah 90: Al-Balad</option>
+      <option value="/alquran/91/" >Surah 91: Ash-Shams</option>
+      <option value="/alquran/92/" >Surah 92: Al-Layl</option>
+      <option value="/alquran/93/" >Surah 93: Ad-Duha</option>
+      <option value="/alquran/94/" >Surah 94: Ash-Sharh</option>
+      <option value="/alquran/95/" >Surah 95: At-Tin</option>
+      <option value="/alquran/96/" >Surah 96: Al-'Alaq</option>
+      <option value="/alquran/97/" >Surah 97: Al-Qadr</option>
+      <option value="/alquran/98/" >Surah 98: Al-Bayyinah</option>
+      <option value="/alquran/99/" >Surah 99: Az-Zalzalah</option>
+      <option value="/alquran/100/" >Surah 100: Al-'Adiyat</option>
+      <option value="/alquran/101/" >Surah 101: Al-Qari'ah</option>
+      <option value="/alquran/102/" >Surah 102: At-Takathur</option>
+      <option value="/alquran/103/" >Surah 103: Al-'Asr</option>
+      <option value="/alquran/104/" >Surah 104: Al-Humazah</option>
+      <option value="/alquran/105/" >Surah 105: Al-Fil</option>
+      <option value="/alquran/106/" >Surah 106: Quraysh</option>
+      <option value="/alquran/107/" >Surah 107: Al-Ma'un</option>
+      <option value="/alquran/108/" >Surah 108: Al-Kauthar</option>
+      <option value="/alquran/109/" >Surah 109: Al-Kafirun</option>
+      <option value="/alquran/110/" >Surah 110: An-Nasr</option>
+      <option value="/alquran/111/" >Surah 111: Al-Masad</option>
+      <option value="/alquran/112/" >Surah 112: Al-Ikhlas</option>
+      <option value="/alquran/113/" >Surah 113: Al-Falaq</option>
+      <option value="/alquran/114/" >Surah 114: An-Nas</option>
+    </select>
+  </div>
+
+  <div class="flex-1">
+    <label for="verse-select" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Jump to Verse</label>
+    <select id="verse-select" onchange="window.location.href=this.value" class="block w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-xs outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer">
+      <option value="">Select verse...</option>
+      <option value="/alquran/42/1">Verse 1</option>
+      <option value="/alquran/42/2">Verse 2</option>
+      <option value="/alquran/42/3">Verse 3</option>
+      <option value="/alquran/42/4">Verse 4</option>
+      <option value="/alquran/42/5">Verse 5</option>
+      <option value="/alquran/42/6">Verse 6</option>
+      <option value="/alquran/42/7">Verse 7</option>
+      <option value="/alquran/42/8">Verse 8</option>
+      <option value="/alquran/42/9">Verse 9</option>
+      <option value="/alquran/42/10">Verse 10</option>
+      <option value="/alquran/42/11">Verse 11</option>
+      <option value="/alquran/42/12">Verse 12</option>
+      <option value="/alquran/42/13">Verse 13</option>
+      <option value="/alquran/42/14">Verse 14</option>
+      <option value="/alquran/42/15">Verse 15</option>
+      <option value="/alquran/42/16">Verse 16</option>
+      <option value="/alquran/42/17">Verse 17</option>
+      <option value="/alquran/42/18">Verse 18</option>
+      <option value="/alquran/42/19">Verse 19</option>
+      <option value="/alquran/42/20">Verse 20</option>
+      <option value="/alquran/42/21">Verse 21</option>
+      <option value="/alquran/42/22">Verse 22</option>
+      <option value="/alquran/42/23">Verse 23</option>
+      <option value="/alquran/42/24">Verse 24</option>
+      <option value="/alquran/42/25">Verse 25</option>
+      <option value="/alquran/42/26">Verse 26</option>
+      <option value="/alquran/42/27">Verse 27</option>
+      <option value="/alquran/42/28">Verse 28</option>
+      <option value="/alquran/42/29">Verse 29</option>
+      <option value="/alquran/42/30">Verse 30</option>
+      <option value="/alquran/42/31">Verse 31</option>
+      <option value="/alquran/42/32">Verse 32</option>
+      <option value="/alquran/42/33">Verse 33</option>
+      <option value="/alquran/42/34">Verse 34</option>
+      <option value="/alquran/42/35">Verse 35</option>
+      <option value="/alquran/42/36">Verse 36</option>
+      <option value="/alquran/42/37">Verse 37</option>
+      <option value="/alquran/42/38">Verse 38</option>
+      <option value="/alquran/42/39">Verse 39</option>
+      <option value="/alquran/42/40">Verse 40</option>
+      <option value="/alquran/42/41">Verse 41</option>
+      <option value="/alquran/42/42">Verse 42</option>
+      <option value="/alquran/42/43">Verse 43</option>
+      <option value="/alquran/42/44">Verse 44</option>
+      <option value="/alquran/42/45">Verse 45</option>
+      <option value="/alquran/42/46">Verse 46</option>
+      <option value="/alquran/42/47">Verse 47</option>
+      <option value="/alquran/42/48">Verse 48</option>
+      <option value="/alquran/42/49">Verse 49</option>
+      <option value="/alquran/42/50">Verse 50</option>
+      <option value="/alquran/42/51">Verse 51</option>
+      <option value="/alquran/42/52">Verse 52</option>
+      <option value="/alquran/42/53">Verse 53</option>
+    </select>
+  </div>
 </div>
 
 <div class="space-y-6">
@@ -84,7 +206,7 @@ permalink: /42/page2
         42:31
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَمَآ أَنتُم بِمُعۡجِزِينَ فِي ٱلۡأَرۡضِۖ وَمَا لَكُم مِّن دُونِ ٱللَّهِ مِن وَلِيّٖ وَلَا نَصِيرٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَمَآ أَنتُم بِمُعۡجِزِينَ فِي ٱلۡأَرۡضِۖ وَمَا لَكُم مِّن دُونِ ٱللَّهِ مِن وَلِيّٖ وَلَا نَصِيرٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">And you cannot escape from Allâh (i.e. His punishment) in the earth, and besides Allâh you have neither any Walî (guardian or a protector, helper) nor any helper.</p>
   </div>
 
@@ -94,7 +216,7 @@ permalink: /42/page2
         42:32
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَمِنۡ ءَايَٰتِهِ ٱلۡجَوَارِ فِي ٱلۡبَحۡرِ كَٱلۡأَعۡلَٰمِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَمِنۡ ءَايَٰتِهِ ٱلۡجَوَارِ فِي ٱلۡبَحۡرِ كَٱلۡأَعۡلَٰمِ</p>
     <p class="text-slate-700 text-base leading-relaxed">And among His Signs are the ships in the sea like mountains.</p>
   </div>
 
@@ -104,7 +226,7 @@ permalink: /42/page2
         42:33
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">إِن يَشَأۡ يُسۡكِنِ ٱلرِّيحَ فَيَظۡلَلۡنَ رَوَاكِدَ عَلَىٰ ظَهۡرِهِۦٓۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّكُلِّ صَبَّارٖ شَكُورٍ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">إِن يَشَأۡ يُسۡكِنِ ٱلرِّيحَ فَيَظۡلَلۡنَ رَوَاكِدَ عَلَىٰ ظَهۡرِهِۦٓۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّكُلِّ صَبَّارٖ شَكُورٍ</p>
     <p class="text-slate-700 text-base leading-relaxed">If He wills, He causes the wind to cease, then they would become motionless on the back (of the sea). Verily, in this are signs for everyone patient and grateful.</p>
   </div>
 
@@ -114,7 +236,7 @@ permalink: /42/page2
         42:34
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَوۡ يُوبِقۡهُنَّ بِمَا كَسَبُواْ وَيَعۡفُ عَن كَثِيرٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَوۡ يُوبِقۡهُنَّ بِمَا كَسَبُواْ وَيَعۡفُ عَن كَثِيرٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">Or He may destroy them (by shipwreck) because of that which their (people) have earned. And He pardons much.</p>
   </div>
 
@@ -128,7 +250,7 @@ permalink: /42/page2
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَيَعۡلَمَ ٱلَّذِينَ يُجَٰدِلُونَ فِيٓ ءَايَٰتِنَا مَا لَهُم مِّن مَّحِيصٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَيَعۡلَمَ ٱلَّذِينَ يُجَٰدِلُونَ فِيٓ ءَايَٰتِنَا مَا لَهُم مِّن مَّحِيصٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">And those who dispute (polytheists with Our Messenger Muhammad صلى الله عليه و سلم) as regards Our Ayât (proofs, signs, verses, etc. of Islâmic Monotheism) may know that there is no place of refuge for them (from Allâh’s punishment)<button onclick="document.getElementById('fn-42-35').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[8]</button> [Tafsir At-Tabari].</p>
   </div>
 
@@ -150,7 +272,7 @@ permalink: /42/page2
         42:36
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">فَمَآ أُوتِيتُم مِّن شَيۡءٖ فَمَتَٰعُ ٱلۡحَيَوٰةِ ٱلدُّنۡيَاۚ وَمَا عِندَ ٱللَّهِ خَيۡرٞ وَأَبۡقَىٰ لِلَّذِينَ ءَامَنُواْ وَعَلَىٰ رَبِّهِمۡ يَتَوَكَّلُونَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">فَمَآ أُوتِيتُم مِّن شَيۡءٖ فَمَتَٰعُ ٱلۡحَيَوٰةِ ٱلدُّنۡيَاۚ وَمَا عِندَ ٱللَّهِ خَيۡرٞ وَأَبۡقَىٰ لِلَّذِينَ ءَامَنُواْ وَعَلَىٰ رَبِّهِمۡ يَتَوَكَّلُونَ</p>
     <p class="text-slate-700 text-base leading-relaxed">So whatever you have been given is but (a passing) enjoyment for this worldly life, but that which is with Allâh (Paradise) is better and more lasting for those who believe (in the Oneness of Allâh - Islâmic Monotheism) and put their trust in their Lord (concerning all of their affairs).</p>
   </div>
 
@@ -164,7 +286,7 @@ permalink: /42/page2
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ يَجۡتَنِبُونَ كَبَٰٓئِرَ ٱلۡإِثۡمِ وَٱلۡفَوَٰحِشَ وَإِذَا مَا غَضِبُواْ هُمۡ يَغۡفِرُونَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ يَجۡتَنِبُونَ كَبَٰٓئِرَ ٱلۡإِثۡمِ وَٱلۡفَوَٰحِشَ وَإِذَا مَا غَضِبُواْ هُمۡ يَغۡفِرُونَ</p>
     <p class="text-slate-700 text-base leading-relaxed">And those who avoid the greater sins,<button onclick="document.getElementById('fn-42-37').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[9]</button> and Al-Fawâhish (illegal sexual intercourse), and when they are angry, forgive.<button onclick="document.getElementById('fn-42-37').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[10]</button></p>
   </div>
 
@@ -191,7 +313,7 @@ d) See the footnote of (V.2:278).
         42:38
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ ٱسۡتَجَابُواْ لِرَبِّهِمۡ وَأَقَامُواْ ٱلصَّلَوٰةَ وَأَمۡرُهُمۡ شُورَىٰ بَيۡنَهُمۡ وَمِمَّا رَزَقۡنَٰهُمۡ يُنفِقُونَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ ٱسۡتَجَابُواْ لِرَبِّهِمۡ وَأَقَامُواْ ٱلصَّلَوٰةَ وَأَمۡرُهُمۡ شُورَىٰ بَيۡنَهُمۡ وَمِمَّا رَزَقۡنَٰهُمۡ يُنفِقُونَ</p>
     <p class="text-slate-700 text-base leading-relaxed">And those who answer the Call of their Lord [i.e. to believe that He is the only One Lord (Allâh), and to worship none but Him Alone], and perform As-Salât (Iqâmat-as-Salât), and who (conduct) their affairs by mutual consultation, and who spend of what We have bestowed on them.</p>
   </div>
 
@@ -201,7 +323,7 @@ d) See the footnote of (V.2:278).
         42:39
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ إِذَآ أَصَابَهُمُ ٱلۡبَغۡيُ هُمۡ يَنتَصِرُونَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَٱلَّذِينَ إِذَآ أَصَابَهُمُ ٱلۡبَغۡيُ هُمۡ يَنتَصِرُونَ</p>
     <p class="text-slate-700 text-base leading-relaxed">And those who, when an oppressive wrong is done to them, take revenge.</p>
   </div>
 
@@ -211,7 +333,7 @@ d) See the footnote of (V.2:278).
         42:40
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَجَزَٰٓؤُاْ سَيِّئَةٖ سَيِّئَةٞ مِّثۡلُهَاۖ فَمَنۡ عَفَا وَأَصۡلَحَ فَأَجۡرُهُۥ عَلَى ٱللَّهِۚ إِنَّهُۥ لَا يُحِبُّ ٱلظَّٰلِمِينَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَجَزَٰٓؤُاْ سَيِّئَةٖ سَيِّئَةٞ مِّثۡلُهَاۖ فَمَنۡ عَفَا وَأَصۡلَحَ فَأَجۡرُهُۥ عَلَى ٱللَّهِۚ إِنَّهُۥ لَا يُحِبُّ ٱلظَّٰلِمِينَ</p>
     <p class="text-slate-700 text-base leading-relaxed">The recompense for an evil is an evil like thereof; but whoever forgives and makes reconciliation, his reward is with Allâh. Verily, He likes not the Zâlimûn (oppressors, polytheists, and wrong-doers).</p>
   </div>
 
@@ -221,7 +343,7 @@ d) See the footnote of (V.2:278).
         42:41
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَلَمَنِ ٱنتَصَرَ بَعۡدَ ظُلۡمِهِۦ فَأُوْلَٰٓئِكَ مَا عَلَيۡهِم مِّن سَبِيلٍ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَلَمَنِ ٱنتَصَرَ بَعۡدَ ظُلۡمِهِۦ فَأُوْلَٰٓئِكَ مَا عَلَيۡهِم مِّن سَبِيلٍ</p>
     <p class="text-slate-700 text-base leading-relaxed">And indeed whosoever takes revenge after he has suffered wrong, for such there is no way (of blame) against them.</p>
   </div>
 
@@ -231,7 +353,7 @@ d) See the footnote of (V.2:278).
         42:42
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">إِنَّمَا ٱلسَّبِيلُ عَلَى ٱلَّذِينَ يَظۡلِمُونَ ٱلنَّاسَ وَيَبۡغُونَ فِي ٱلۡأَرۡضِ بِغَيۡرِ ٱلۡحَقِّۚ أُوْلَٰٓئِكَ لَهُمۡ عَذَابٌ أَلِيمٞ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">إِنَّمَا ٱلسَّبِيلُ عَلَى ٱلَّذِينَ يَظۡلِمُونَ ٱلنَّاسَ وَيَبۡغُونَ فِي ٱلۡأَرۡضِ بِغَيۡرِ ٱلۡحَقِّۚ أُوْلَٰٓئِكَ لَهُمۡ عَذَابٌ أَلِيمٞ</p>
     <p class="text-slate-700 text-base leading-relaxed">The way (of blame) is only against those who oppress men and rebel in the earth without justification; for such there will be a painful torment.</p>
   </div>
 
@@ -241,7 +363,7 @@ d) See the footnote of (V.2:278).
         42:43
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَلَمَن صَبَرَ وَغَفَرَ إِنَّ ذَٰلِكَ لَمِنۡ عَزۡمِ ٱلۡأُمُورِ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَلَمَن صَبَرَ وَغَفَرَ إِنَّ ذَٰلِكَ لَمِنۡ عَزۡمِ ٱلۡأُمُورِ</p>
     <p class="text-slate-700 text-base leading-relaxed">And verily, whosoever shows patience and forgives, that would truly be from the things recommended by Allâh.</p>
   </div>
 
@@ -251,7 +373,7 @@ d) See the footnote of (V.2:278).
         42:44
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَمَن يُضۡلِلِ ٱللَّهُ فَمَا لَهُۥ مِن وَلِيّٖ مِّنۢ بَعۡدِهِۦۗ وَتَرَى ٱلظَّٰلِمِينَ لَمَّا رَأَوُاْ ٱلۡعَذَابَ يَقُولُونَ هَلۡ إِلَىٰ مَرَدّٖ مِّن سَبِيلٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَمَن يُضۡلِلِ ٱللَّهُ فَمَا لَهُۥ مِن وَلِيّٖ مِّنۢ بَعۡدِهِۦۗ وَتَرَى ٱلظَّٰلِمِينَ لَمَّا رَأَوُاْ ٱلۡعَذَابَ يَقُولُونَ هَلۡ إِلَىٰ مَرَدّٖ مِّن سَبِيلٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">And whomsoever Allâh sends astray, for him there is no Walî (protector, helper, guardian) after Him. And you will see the Zâlimûn (polytheists, wrong-doers, oppressors): when they behold the torment, they will say: "Is there any way of return (to the world)?"</p>
   </div>
 
@@ -265,7 +387,7 @@ d) See the footnote of (V.2:278).
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَتَرَىٰهُمۡ يُعۡرَضُونَ عَلَيۡهَا خَٰشِعِينَ مِنَ ٱلذُّلِّ يَنظُرُونَ مِن طَرۡفٍ خَفِيّٖۗ وَقَالَ ٱلَّذِينَ ءَامَنُوٓاْ إِنَّ ٱلۡخَٰسِرِينَ ٱلَّذِينَ خَسِرُوٓاْ أَنفُسَهُمۡ وَأَهۡلِيهِمۡ يَوۡمَ ٱلۡقِيَٰمَةِۗ أَلَآ إِنَّ ٱلظَّٰلِمِينَ فِي عَذَابٖ مُّقِيمٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَتَرَىٰهُمۡ يُعۡرَضُونَ عَلَيۡهَا خَٰشِعِينَ مِنَ ٱلذُّلِّ يَنظُرُونَ مِن طَرۡفٍ خَفِيّٖۗ وَقَالَ ٱلَّذِينَ ءَامَنُوٓاْ إِنَّ ٱلۡخَٰسِرِينَ ٱلَّذِينَ خَسِرُوٓاْ أَنفُسَهُمۡ وَأَهۡلِيهِمۡ يَوۡمَ ٱلۡقِيَٰمَةِۗ أَلَآ إِنَّ ٱلظَّٰلِمِينَ فِي عَذَابٖ مُّقِيمٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">And you will see them brought forward to it (Hell) made humble by disgrace,<button onclick="document.getElementById('fn-42-45').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[11]</button> (and) looking with stealthy glance. And those who believe will say: "Verily, the losers are they who lose themselves and their families on the Day of Resurrection. Verily, the Zâlimûn [i.e. Al-Kâfirûn (disbelievers in Allâh, in His Oneness and in His Messenger صلى الله عليه و سلم, polytheists, wrong-doers)] will be in a lasting torment. (Tafsir At-Tabari).</p>
   </div>
 
@@ -287,7 +409,7 @@ d) See the footnote of (V.2:278).
         42:46
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَمَا كَانَ لَهُم مِّنۡ أَوۡلِيَآءَ يَنصُرُونَهُم مِّن دُونِ ٱللَّهِۗ وَمَن يُضۡلِلِ ٱللَّهُ فَمَا لَهُۥ مِن سَبِيلٍ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَمَا كَانَ لَهُم مِّنۡ أَوۡلِيَآءَ يَنصُرُونَهُم مِّن دُونِ ٱللَّهِۗ وَمَن يُضۡلِلِ ٱللَّهُ فَمَا لَهُۥ مِن سَبِيلٍ</p>
     <p class="text-slate-700 text-base leading-relaxed">And they will have no Auliyâ’ (protectors, helpers, guardians, lords) to help them other than Allâh. And he whom Allâh sends astray, for him there is no way.</p>
   </div>
 
@@ -297,7 +419,7 @@ d) See the footnote of (V.2:278).
         42:47
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">ٱسۡتَجِيبُواْ لِرَبِّكُم مِّن قَبۡلِ أَن يَأۡتِيَ يَوۡمٞ لَّا مَرَدَّ لَهُۥ مِنَ ٱللَّهِۚ مَا لَكُم مِّن مَّلۡجَإٖ يَوۡمَئِذٖ وَمَا لَكُم مِّن نَّكِيرٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">ٱسۡتَجِيبُواْ لِرَبِّكُم مِّن قَبۡلِ أَن يَأۡتِيَ يَوۡمٞ لَّا مَرَدَّ لَهُۥ مِنَ ٱللَّهِۚ مَا لَكُم مِّن مَّلۡجَإٖ يَوۡمَئِذٖ وَمَا لَكُم مِّن نَّكِيرٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">Answer the Call of your Lord (i.e. accept the Islâmic Monotheism, O mankind, and jinn) before there comes from Allâh a Day which cannot be averted (i.e. the Day of Resurrection). You will have no refuge on that Day nor there will be for you any denying (of your crimes as they are all recorded in the Book of your deeds).</p>
   </div>
 
@@ -307,7 +429,7 @@ d) See the footnote of (V.2:278).
         42:48
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">فَإِنۡ أَعۡرَضُواْ فَمَآ أَرۡسَلۡنَٰكَ عَلَيۡهِمۡ حَفِيظًاۖ إِنۡ عَلَيۡكَ إِلَّا ٱلۡبَلَٰغُۗ وَإِنَّآ إِذَآ أَذَقۡنَا ٱلۡإِنسَٰنَ مِنَّا رَحۡمَةٗ فَرِحَ بِهَاۖ وَإِن تُصِبۡهُمۡ سَيِّئَةُۢ بِمَا قَدَّمَتۡ أَيۡدِيهِمۡ فَإِنَّ ٱلۡإِنسَٰنَ كَفُورٞ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">فَإِنۡ أَعۡرَضُواْ فَمَآ أَرۡسَلۡنَٰكَ عَلَيۡهِمۡ حَفِيظًاۖ إِنۡ عَلَيۡكَ إِلَّا ٱلۡبَلَٰغُۗ وَإِنَّآ إِذَآ أَذَقۡنَا ٱلۡإِنسَٰنَ مِنَّا رَحۡمَةٗ فَرِحَ بِهَاۖ وَإِن تُصِبۡهُمۡ سَيِّئَةُۢ بِمَا قَدَّمَتۡ أَيۡدِيهِمۡ فَإِنَّ ٱلۡإِنسَٰنَ كَفُورٞ</p>
     <p class="text-slate-700 text-base leading-relaxed">But if they turn away (O Muhammad صلى الله عليه و سلم from the Islâmic Monotheism, which you have brought to them). We have not sent you (O Muhammad صلى الله عليه و سلم) as a Hafîz (watcher, protector) over them (i.e. to take care of their deeds and to recompense them). Your duty is to convey (the Message). And verily, when We cause man to taste of Mercy from Us, he rejoices thereat; but when some ill befalls them because of the deeds which their hands have sent forth, then verily, man (becomes) ingrate!</p>
   </div>
 
@@ -317,7 +439,7 @@ d) See the footnote of (V.2:278).
         42:49
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">لِّلَّهِ مُلۡكُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۚ يَخۡلُقُ مَا يَشَآءُۚ يَهَبُ لِمَن يَشَآءُ إِنَٰثٗا وَيَهَبُ لِمَن يَشَآءُ ٱلذُّكُورَ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">لِّلَّهِ مُلۡكُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۚ يَخۡلُقُ مَا يَشَآءُۚ يَهَبُ لِمَن يَشَآءُ إِنَٰثٗا وَيَهَبُ لِمَن يَشَآءُ ٱلذُّكُورَ</p>
     <p class="text-slate-700 text-base leading-relaxed">To Allâh belongs the kingdom of the heavens and the earth. He creates what He wills. He bestows female (offspring) upon whom He wills, and bestows male (offspring) upon whom He wills.</p>
   </div>
 
@@ -327,7 +449,7 @@ d) See the footnote of (V.2:278).
         42:50
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">أَوۡ يُزَوِّجُهُمۡ ذُكۡرَانٗا وَإِنَٰثٗاۖ وَيَجۡعَلُ مَن يَشَآءُ عَقِيمًاۚ إِنَّهُۥ عَلِيمٞ قَدِيرٞ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">أَوۡ يُزَوِّجُهُمۡ ذُكۡرَانٗا وَإِنَٰثٗاۖ وَيَجۡعَلُ مَن يَشَآءُ عَقِيمًاۚ إِنَّهُۥ عَلِيمٞ قَدِيرٞ</p>
     <p class="text-slate-700 text-base leading-relaxed">Or He bestows both males and females, and He renders barren whom He wills. Verily, He is the All-Knower and is Able to do all things.</p>
   </div>
 
@@ -341,7 +463,7 @@ d) See the footnote of (V.2:278).
         View Footnote
       </button>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">۞ وَمَا كَانَ لِبَشَرٍ أَن يُكَلِّمَهُ ٱللَّهُ إِلَّا وَحۡيًا أَوۡ مِن وَرَآيِٕ حِجَابٍ أَوۡ يُرۡسِلَ رَسُولٗا فَيُوحِيَ بِإِذۡنِهِۦ مَا يَشَآءُۚ إِنَّهُۥ عَلِيٌّ حَكِيمٞ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">۞ وَمَا كَانَ لِبَشَرٍ أَن يُكَلِّمَهُ ٱللَّهُ إِلَّا وَحۡيًا أَوۡ مِن وَرَآيِٕ حِجَابٍ أَوۡ يُرۡسِلَ رَسُولٗا فَيُوحِيَ بِإِذۡنِهِۦ مَا يَشَآءُۚ إِنَّهُۥ عَلِيٌّ حَكِيمٞ</p>
     <p class="text-slate-700 text-base leading-relaxed">It is not given to any human being that Allâh should speak to him unless (it be) by Revelation, or from behind a veil, or (that) He sends a Messenger to reveal what He wills by His Leave. Verily, He is Most High, Most Wise.<button onclick="document.getElementById('fn-42-51').showModal()" class="text-emerald-600 hover:text-emerald-700 font-bold bg-emerald-50 px-1 rounded mx-0.5 text-xs align-super cursor-pointer no-underline border-none shadow-none font-sans">[12]</button></p>
   </div>
 
@@ -363,7 +485,7 @@ d) See the footnote of (V.2:278).
         42:52
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">وَكَذَٰلِكَ أَوۡحَيۡنَآ إِلَيۡكَ رُوحٗا مِّنۡ أَمۡرِنَاۚ مَا كُنتَ تَدۡرِي مَا ٱلۡكِتَٰبُ وَلَا ٱلۡإِيمَٰنُ وَلَٰكِن جَعَلۡنَٰهُ نُورٗا نَّهۡدِي بِهِۦ مَن نَّشَآءُ مِنۡ عِبَادِنَاۚ وَإِنَّكَ لَتَهۡدِيٓ إِلَىٰ صِرَٰطٖ مُّسۡتَقِيمٖ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">وَكَذَٰلِكَ أَوۡحَيۡنَآ إِلَيۡكَ رُوحٗا مِّنۡ أَمۡرِنَاۚ مَا كُنتَ تَدۡرِي مَا ٱلۡكِتَٰبُ وَلَا ٱلۡإِيمَٰنُ وَلَٰكِن جَعَلۡنَٰهُ نُورٗا نَّهۡدِي بِهِۦ مَن نَّشَآءُ مِنۡ عِبَادِنَاۚ وَإِنَّكَ لَتَهۡدِيٓ إِلَىٰ صِرَٰطٖ مُّسۡتَقِيمٖ</p>
     <p class="text-slate-700 text-base leading-relaxed">And thus We have sent to you (O Muhammad صلى الله عليه و سلم) Ruh (a Revelation, and a Mercy) of Our Command. You knew not what is the Book, nor what is Faith? But We have made it (this Qur’ân) a light wherewith We guide whosoever of Our slaves We will. And verily, you (O Muhammad صلى الله عليه و سلم) are indeed guiding (mankind) to the Straight Path (i.e. Allâh’s Religion of Islâmic Monotheism).</p>
   </div>
 
@@ -373,7 +495,7 @@ d) See the footnote of (V.2:278).
         42:53
       </a>
     </div>
-    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">صِرَٰطِ ٱللَّهِ ٱلَّذِي لَهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ أَلَآ إِلَى ٱللَّهِ تَصِيرُ ٱلۡأُمُورُ</p>
+    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">صِرَٰطِ ٱللَّهِ ٱلَّذِي لَهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ أَلَآ إِلَى ٱللَّهِ تَصِيرُ ٱلۡأُمُورُ</p>
     <p class="text-slate-700 text-base leading-relaxed">The Path of Allâh to Whom belongs all that is in the heavens and all that is in the earth. Verily, all matters at the end go to Allâh (for decision).</p>
   </div>
 
