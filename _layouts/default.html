@@ -21,19 +21,29 @@
   body { font-family: 'Plus Jakarta Sans', sans-serif; }
   .font-arabic { 
   font-family: 'KFGQPC HAFS Uthmanic Script', serif;
-  font-size: 2.5rem;       /* ~40px for ideal reading readability */
-  line-height: 2.6;         /* Essential room to stop accents from clipping */
-  color: #0f172a;          /* Premium slate-900 color profile */
+  font-size: 2.5rem;       /* ~40px */
+  line-height: 2.8;         /* Safe vertical breathing room */
+  color: #0f172a;
   text-align: right;
   direction: rtl;
   }
-  .verse-marker {
-  font-family: 'KFGQPC HAFS Uthmanic Script', serif;
-  color: #059669;          /* Emerald-600 focus tone */
-  font-size: 2rem;
-  margin-right: 0.25rem;
-  user-select: none;       /* Prevents numbers from messing up copy/paste text */
-} 
+.verse-marker {
+  font-family: ui-sans-serif, system-ui, sans-serif; /* Clean numbers */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #059669;          /* Emerald-600 */
+  font-weight: 700;
+  font-size: 1.1rem;       /* Scaled down to fit nicely in the sentence line */
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid #10b981; /* Emerald-500 border ring */
+  border-radius: 9999px;   /* Perfect round circle */
+  margin-right: 0.75rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;  /* Keeps it aligned with the baseline */
+  user-select: none;
+}
   </style>
 </head>
 <body class="bg-slate-50/50 text-slate-800 antialiased min-h-screen flex flex-col">
