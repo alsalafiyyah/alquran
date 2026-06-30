@@ -94,6 +94,7 @@ for sura in range(1, TOTAL_SURAS + 1):
         surah_html += '<div class="space-y-6">\n'
         for v in chunk:
             unique_id = f"fn-{sura}-{v['aya']}"
+            verse_num = f"{v['aya']}"
             
             raw_translation = v["translation"]
             clean_translation = re.sub(r'^\d+\.\s*', '', raw_translation)
@@ -113,7 +114,9 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'      </button>\n'
             surah_html += f'    </div>\n'
             
-            surah_html += f'    <p dir="rtl" class="font-arabic text-right text-3xl text-slate-900 leading-widest my-6 font-medium">{v["arabic_text"]}</p>\n'
+            surah_html += f'    <p dir="rtl" class="font-arabic text-right leading-widest mb-6 select-all">\n'
+            surah_html += f'      {v["arabic_text"]} <span class="verse-marker">&#x06DD;{verse_num}</span>\n'
+            surah_html += f'    </p>\n'
             surah_html += f'    <p class="text-slate-700 text-base leading-relaxed">{final_translation}</p>\n'
             surah_html += f'  </div>\n\n'
             
@@ -209,7 +212,7 @@ index_html = "---\nlayout: default\ntitle: \"Al-Quran Chapters\"\npermalink: /al
 
 index_html += '<div class="max-w-5xl mx-auto px-4 py-8">\n'
 index_html += '  <div class="text-center mb-12">\n'
-index_html += '    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">{{{{ site.title }}}}</h1>\n'
+index_html += '    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">{{ site.title }}</h1>\n'
 index_html += '    <p class="text-slate-500 max-w-md mx-auto">Select a Surah index chapter below to read translations and verse footnotes.</p>\n'
 index_html += '  </div>\n\n'
 

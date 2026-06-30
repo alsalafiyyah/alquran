@@ -6,6 +6,7 @@
   <title>{{ page.title }}</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
+  @import url('https://fonts.cdnfonts.com/css/kfgqpc-hafs-uthmanic-script'); 
   @font-face {
   font-family: 'KFGQPC Uthmanic Script HAFS';
   src: url('https://alsalafiyyah.github.io/alquran/assets/font/uthmani_hafs.otf') format('opentype'), local("KFGQPC Uthmanic Script HAFS");
@@ -17,8 +18,22 @@
   src: local('KFGQPC Uthmanic Script HAFS'),
        url(https://raw.githubusercontent.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff2/UthmanicHafs1%20Ver09.woff2);
   }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-arabic { font-family: "Uthman Hafs", serif !important; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .font-arabic { 
+  font-family: 'KFGQPC HAFS Uthmanic Script', serif;
+  font-size: 2.5rem;       /* ~40px for ideal reading readability */
+  line-height: 2.6;         /* Essential room to stop accents from clipping */
+  color: #0f172a;          /* Premium slate-900 color profile */
+  text-align: right;
+  direction: rtl;
+  }
+  .verse-marker {
+  font-family: 'KFGQPC HAFS Uthmanic Script', serif;
+  color: #059669;          /* Emerald-600 focus tone */
+  font-size: 2rem;
+  margin-right: 0.25rem;
+  user-select: none;       /* Prevents numbers from messing up copy/paste text */
+} 
   </style>
 </head>
 <body class="bg-slate-50/50 text-slate-800 antialiased min-h-screen flex flex-col">
