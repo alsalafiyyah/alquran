@@ -94,7 +94,6 @@ for sura in range(1, TOTAL_SURAS + 1):
         surah_html += '<div class="space-y-6">\n'
         for v in chunk:
             unique_id = f"fn-{sura}-{v['aya']}"
-            verse_num = f"{v['aya']}"
             
             raw_translation = v["translation"]
             clean_translation = re.sub(r'^\d+\.\s*', '', raw_translation)
@@ -114,9 +113,7 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'      </button>\n'
             surah_html += f'    </div>\n'
             
-            surah_html += f'    <p dir="rtl" class="font-uthmani text-right leading-widest mb-6 select-all">\n'
-            surah_html += f'      {v["arabic_text"]} <span class="verse-marker">{v["aya"]}</span>\n'
-            surah_html += f'    </p>\n'
+            surah_html += f'    <p dir="rtl" class="font-arabic text-right text-4xl text-slate-900 leading-widest my-6 font-medium">{v["arabic_text"]}</p>\n'
             surah_html += f'    <p class="text-slate-700 text-base leading-relaxed">{final_translation}</p>\n'
             surah_html += f'  </div>\n\n'
             
