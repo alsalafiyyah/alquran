@@ -114,8 +114,8 @@ for sura in range(1, TOTAL_SURAS + 1):
                 surah_html += f'      </button>\n'
             surah_html += f'    </div>\n'
             
-            surah_html += f'    <p dir="rtl" class="font-arabic text-right leading-widest mb-6 select-all">\n'
-            surah_html += f'      {v["arabic_text"]} <span class="verse-marker">&#x06DD;{verse_num}</span>\n'
+            surah_html += f'    <p dir="rtl" class="font-uthmani text-right leading-widest mb-6 select-all">\n'
+            surah_html += f'      {v["arabic_text"]} <span class="verse-marker">{v["aya"]}</span>\n'
             surah_html += f'    </p>\n'
             surah_html += f'    <p class="text-slate-700 text-base leading-relaxed">{final_translation}</p>\n'
             surah_html += f'  </div>\n\n'
