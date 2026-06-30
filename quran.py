@@ -222,7 +222,7 @@ for sura in range(1, TOTAL_SURAS + 1):
 print("Generating root chapters indexing page...")
 os.makedirs("verses", exist_ok=True)
 
-index_html = "---\nlayout: default\ntitle: \"Al-Quran Chapters\"\npermalink: /alquran/\n---\n\n"
+index_html = "---\nlayout: default\ntitle: \"Al-Quran Chapters\"\npermalink: /chapter/\n---\n\n"
 
 index_html += '<div class="max-w-5xl mx-auto px-4 py-8">\n'
 index_html += '  <div class="text-center mb-12">\n'
